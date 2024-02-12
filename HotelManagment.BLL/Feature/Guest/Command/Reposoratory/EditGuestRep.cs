@@ -31,7 +31,6 @@ namespace HotelManagment.BLL.Feature.Guest.Command.Reposoratory
 
                 if (Guset is not null)
                 {
-                    Guset.Id = Data.Id;
                     Guset.First_name = Data.First_name;
                     Guset.Last_name = Data.Last_name;
                     Guset.Birth_day = Data.Birth_day;

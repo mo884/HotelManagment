@@ -1,4 +1,5 @@
-﻿using HotelManagment.BLL.Feature.Guest.ModelVM;
+﻿
+using HotelManagment.BLL.Feature.Guest.ModelVM;
 using HotelManagment.DAL.Entities.GuestInfo;
 using System;
 using System.Collections.Generic;
