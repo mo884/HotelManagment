@@ -12,7 +12,7 @@ namespace HotelManagment.PLL
 {
     public partial class FrontEnd : Form
     {
-        bool sideBarIsOpen=true;
+        bool sideBarIsOpen = true;
         public FrontEnd()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace HotelManagment.PLL
         {
             if (sideBarIsOpen)
             {
-                flowLayoutPanel1.Width -=10;
+                flowLayoutPanel1.Width -=190;
 
                 if (flowLayoutPanel1.Width == flowLayoutPanel1.MinimumSize.Width)
                 {
@@ -31,7 +31,7 @@ namespace HotelManagment.PLL
                 }
                 else
                 {
-                    flowLayoutPanel1.Width +=10;
+                    flowLayoutPanel1.Width +=190;
                     if (flowLayoutPanel1.Width==flowLayoutPanel1.MaximumSize.Width)
                     {
                         sideBarIsOpen = true;
@@ -44,6 +44,11 @@ namespace HotelManagment.PLL
         private void button4_Click(object sender, EventArgs e)
         {
             timer1.Start();
+        }
+
+        private void FrontEnd_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

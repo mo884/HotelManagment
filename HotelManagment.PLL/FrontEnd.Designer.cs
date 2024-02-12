@@ -32,11 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrontEnd));
             flowLayoutPanel1 = new FlowLayoutPanel();
             panel1 = new Panel();
-            SideBar = new Panel();
-            button5 = new Button();
-            button4 = new Button();
-            panel4 = new Panel();
             panel2 = new Panel();
+            button4 = new Button();
             panel5 = new Panel();
             panel6 = new Panel();
             Reservation = new Button();
@@ -54,7 +51,6 @@
             timer1 = new System.Windows.Forms.Timer(components);
             flowLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
-            SideBar.SuspendLayout();
             panel5.SuspendLayout();
             panel6.SuspendLayout();
             panel9.SuspendLayout();
@@ -80,52 +76,12 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(SideBar);
             panel1.Controls.Add(panel2);
+            panel1.Controls.Add(button4);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
             panel1.Size = new Size(200, 54);
             panel1.TabIndex = 1;
-            // 
-            // SideBar
-            // 
-            SideBar.Controls.Add(button5);
-            SideBar.Controls.Add(button4);
-            SideBar.Controls.Add(panel4);
-            SideBar.Location = new Point(0, 3);
-            SideBar.Name = "SideBar";
-            SideBar.Size = new Size(200, 63);
-            SideBar.TabIndex = 3;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.LightSeaGreen;
-            button5.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.ForeColor = SystemColors.ButtonHighlight;
-            button5.Location = new Point(48, 6);
-            button5.Name = "button5";
-            button5.Size = new Size(149, 48);
-            button5.TabIndex = 4;
-            button5.Text = "Menu";
-            button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            button4.Cursor = Cursors.Hand;
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.Location = new Point(3, 6);
-            button4.Name = "button4";
-            button4.Size = new Size(42, 36);
-            button4.TabIndex = 3;
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
-            // panel4
-            // 
-            panel4.Location = new Point(0, 125);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(197, 61);
-            panel4.TabIndex = 2;
             // 
             // panel2
             // 
@@ -133,6 +89,17 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(197, 61);
             panel2.TabIndex = 2;
+            // 
+            // button4
+            // 
+            button4.Cursor = Cursors.Hand;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.Location = new Point(1, 3);
+            button4.Name = "button4";
+            button4.Size = new Size(32, 36);
+            button4.TabIndex = 3;
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // panel5
             // 
@@ -275,9 +242,9 @@
             Controls.Add(flowLayoutPanel1);
             Name = "FrontEnd";
             Text = "FrontEnd";
+            Load += FrontEnd_Load;
             flowLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
-            SideBar.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel6.ResumeLayout(false);
             panel9.ResumeLayout(false);
@@ -292,8 +259,6 @@
         private Panel panel1;
         private Panel panel2;
         private Button Reservation;
-        private Panel SideBar;
-        private Panel panel4;
         private Panel panel5;
         private Panel panel6;
         private Panel panel7;
@@ -309,6 +274,5 @@
         private Button button3;
         private Panel panel14;
         private System.Windows.Forms.Timer timer1;
-        private Button button5;
     }
 }

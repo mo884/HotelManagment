@@ -25,7 +25,6 @@ namespace HotelManagment.BLL.Feature.Login.Command.Reposoratory
             {
                 if (VerifyPassword(loginVM.Password, user.Passward))
                 {
-                    
                     return $"{user.Type}";
                 }
             }

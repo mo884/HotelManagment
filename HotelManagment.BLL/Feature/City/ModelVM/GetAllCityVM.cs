@@ -15,6 +15,6 @@ namespace HotelManagment.BLL.Feature.City.ModelVM
         public int StateID { get; set; }
         [ForeignKey(nameof(StateID))]
         public HotelManagment.DAL.Entities.Adress.State state { get; set; }
-        public List<Streets>? Streets { get; set; }
+        public List<HotelManagment.DAL.Entities.Adress.Streets>? Streets { get; set; }
     }
 }
