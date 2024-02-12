@@ -7,16 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HotelManagment.DAL\HotelManagment.DAL.csproj" />
+    <Compile Remove="Mapping\CityMap\Command\**" />
+    <Compile Remove="Mapping\StateMap\Command\**" />
+    <Compile Remove="Mapping\StreetsMapp\Command\**" />
+    <EmbeddedResource Remove="Mapping\CityMap\Command\**" />
+    <EmbeddedResource Remove="Mapping\StateMap\Command\**" />
+    <EmbeddedResource Remove="Mapping\StreetsMapp\Command\**" />
+    <None Remove="Mapping\CityMap\Command\**" />
+    <None Remove="Mapping\StateMap\Command\**" />
+    <None Remove="Mapping\StreetsMapp\Command\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Mapping\Guest - Copy %282%29\Command\" />
-    <Folder Include="Mapping\Guest - Copy %282%29\Queries\" />
-    <Folder Include="Mapping\Guest - Copy %283%29\Command\" />
-    <Folder Include="Mapping\Guest - Copy %283%29\Queries\" />
-    <Folder Include="Mapping\Guest - Copy\Command\" />
-    <Folder Include="Mapping\Guest - Copy\Queries\" />
+    <ProjectReference Include="..\HotelManagment.DAL\HotelManagment.DAL.csproj" />
   </ItemGroup>
 
 </Project>
