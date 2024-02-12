@@ -11,7 +11,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Mapping\" />
+    <Folder Include="Feature\Guest\Queries\InterFace\" />
+    <Folder Include="Feature\Guest\Queries\Reposoratory\" />
+    <Folder Include="Mapping\Guest - Copy %282%29\Command\" />
+    <Folder Include="Mapping\Guest - Copy %282%29\Queries\" />
+    <Folder Include="Mapping\Guest - Copy %283%29\Command\" />
+    <Folder Include="Mapping\Guest - Copy %283%29\Queries\" />
+    <Folder Include="Mapping\Guest - Copy %284%29\Command\" />
+    <Folder Include="Mapping\Guest - Copy %284%29\Queries\" />
+    <Folder Include="Mapping\Guest - Copy\Command\" />
+    <Folder Include="Mapping\Guest - Copy\Queries\" />
+    <Folder Include="Mapping\GuestMap\Queries\" />
   </ItemGroup>
 
 </Project>
