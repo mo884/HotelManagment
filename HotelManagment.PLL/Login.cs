@@ -40,12 +40,13 @@ namespace HotelManagment.PLL
                 else
                 {
                     MetroFramework.MetroMessageBox.Show(this, "Username or Password is wrong, try again", "Login Failed", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                    PasswordtextBox.Text = "";
 
                 }
             }
             catch (Exception)
             {
+                UserNametextBox.Text ="";
+                PasswordtextBox.Text = "";
 
 
             }
