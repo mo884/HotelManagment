@@ -22,18 +22,20 @@ namespace HotelManagment.PLL
         {
             if (sideBarIsOpen)
             {
-                flowLayoutPanel1.Width -=190;
+
 
                 if (flowLayoutPanel1.Width == flowLayoutPanel1.MinimumSize.Width)
                 {
-                    sideBarIsOpen = false;
+                    flowLayoutPanel1.Width +=200;
+                    sideBarIsOpen = true;
                     timer1.Stop();
                 }
                 else
                 {
-                    flowLayoutPanel1.Width +=190;
+
                     if (flowLayoutPanel1.Width==flowLayoutPanel1.MaximumSize.Width)
                     {
+                        flowLayoutPanel1.Width -=200;
                         sideBarIsOpen = true;
                         timer1.Stop();
                     }
@@ -46,7 +48,7 @@ namespace HotelManagment.PLL
             timer1.Start();
         }
 
-        private void FrontEnd_Load(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
