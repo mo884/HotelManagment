@@ -16,6 +16,7 @@ namespace HotelManagment.PLL
         public FrontEnd()
         {
             InitializeComponent();
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -50,6 +51,36 @@ namespace HotelManagment.PLL
 
         private void label3_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void Reservation_Click(object sender, EventArgs e)
+        {
+            panel19.Location = new Point(220, 0);
+            panel19.Visible =true;
+            Search.Location = new Point(-1800, 125);
+            Search.Visible =false;
+            Grid.Location =new Point(-1900, 125);
+            Grid.Visible =false;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Search.Location = new Point(275, 128);
+            panel19.Location = new Point(-1826, 0);
+            Search.Visible =true;
+            Grid.Location =new Point(-1900, 125);
+
+            Grid.Visible =false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Grid.Location = new Point(230, 10);
+            panel19.Location = new Point(-1826, 0);
+            Search.Location = new Point(-1800, 125);
+            Grid.Visible =true;
 
         }
     }

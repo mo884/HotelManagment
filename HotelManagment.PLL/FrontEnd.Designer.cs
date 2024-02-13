@@ -50,7 +50,34 @@
             panel14 = new Panel();
             timer1 = new System.Windows.Forms.Timer(components);
             panel3 = new Panel();
+            PArt3 = new Panel();
+            button18 = new Button();
+            button17 = new Button();
+            button16 = new Button();
+            comboBox14 = new ComboBox();
+            panel16 = new Panel();
+            panel17 = new Panel();
+            button11 = new Button();
+            button10 = new Button();
+            comboBox13 = new ComboBox();
+            button9 = new Button();
+            button8 = new Button();
+            panel15 = new Panel();
+            button7 = new Button();
+            button6 = new Button();
+            checkBox3 = new CheckBox();
+            checkBox2 = new CheckBox();
+            checkBox1 = new CheckBox();
+            button5 = new Button();
+            dateTimePicker2 = new DateTimePicker();
+            dateTimePicker1 = new DateTimePicker();
+            comboBox11 = new ComboBox();
+            comboBox12 = new ComboBox();
+            comboBox10 = new ComboBox();
+            comboBox9 = new ComboBox();
+            comboBox8 = new ComboBox();
             panel4 = new Panel();
+            textBox5 = new TextBox();
             label12 = new Label();
             LastName = new Label();
             label10 = new Label();
@@ -74,28 +101,13 @@
             textBox3 = new TextBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
-            textBox5 = new TextBox();
-            panel15 = new Panel();
-            comboBox8 = new ComboBox();
-            comboBox9 = new ComboBox();
-            comboBox10 = new ComboBox();
-            comboBox11 = new ComboBox();
-            comboBox12 = new ComboBox();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
-            button5 = new Button();
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
-            checkBox3 = new CheckBox();
-            button6 = new Button();
-            button7 = new Button();
-            panel16 = new Panel();
-            button8 = new Button();
-            button9 = new Button();
-            comboBox13 = new ComboBox();
-            panel17 = new Panel();
-            button10 = new Button();
-            button11 = new Button();
+            panel19 = new Panel();
+            panel18 = new Panel();
+            Search = new Panel();
+            button13 = new Button();
+            textBox7 = new TextBox();
+            Grid = new Panel();
+            dataGridView1 = new DataGridView();
             flowLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             panel5.SuspendLayout();
@@ -104,10 +116,15 @@
             panel11.SuspendLayout();
             panel13.SuspendLayout();
             panel3.SuspendLayout();
-            panel4.SuspendLayout();
-            panel15.SuspendLayout();
+            PArt3.SuspendLayout();
             panel16.SuspendLayout();
             panel17.SuspendLayout();
+            panel15.SuspendLayout();
+            panel4.SuspendLayout();
+            panel19.SuspendLayout();
+            Search.SuspendLayout();
+            Grid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -182,6 +199,7 @@
             Reservation.TabIndex = 0;
             Reservation.Text = "Reservation";
             Reservation.UseVisualStyleBackColor = false;
+            Reservation.Click += Reservation_Click;
             // 
             // panel7
             // 
@@ -217,6 +235,7 @@
             button1.TabIndex = 0;
             button1.Text = "Search";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel10
             // 
@@ -245,6 +264,7 @@
             button2.TabIndex = 0;
             button2.Text = "View";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // panel12
             // 
@@ -288,13 +308,289 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(PArt3);
             panel3.Controls.Add(panel16);
             panel3.Controls.Add(panel15);
             panel3.Controls.Add(panel4);
-            panel3.Location = new Point(227, 3);
+            panel3.ImeMode = ImeMode.NoControl;
+            panel3.Location = new Point(3, 3);
             panel3.Name = "panel3";
             panel3.Size = new Size(823, 442);
             panel3.TabIndex = 1;
+            // 
+            // PArt3
+            // 
+            PArt3.BackColor = SystemColors.ActiveBorder;
+            PArt3.Controls.Add(button18);
+            PArt3.Controls.Add(button17);
+            PArt3.Controls.Add(button16);
+            PArt3.Controls.Add(comboBox14);
+            PArt3.Location = new Point(595, 3);
+            PArt3.Name = "PArt3";
+            PArt3.Size = new Size(228, 436);
+            PArt3.TabIndex = 39;
+            // 
+            // button18
+            // 
+            button18.BackColor = Color.Azure;
+            button18.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button18.ForeColor = Color.Teal;
+            button18.Location = new Point(9, 263);
+            button18.Name = "button18";
+            button18.Size = new Size(212, 37);
+            button18.TabIndex = 43;
+            button18.Text = "Food and menu";
+            button18.UseVisualStyleBackColor = false;
+            // 
+            // button17
+            // 
+            button17.BackColor = Color.Azure;
+            button17.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button17.ForeColor = Color.Teal;
+            button17.Location = new Point(9, 325);
+            button17.Name = "button17";
+            button17.Size = new Size(212, 37);
+            button17.TabIndex = 42;
+            button17.Text = "Food and menu";
+            button17.UseVisualStyleBackColor = false;
+            // 
+            // button16
+            // 
+            button16.BackColor = Color.Azure;
+            button16.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button16.ForeColor = Color.Teal;
+            button16.Location = new Point(9, 390);
+            button16.Name = "button16";
+            button16.Size = new Size(212, 37);
+            button16.TabIndex = 41;
+            button16.Text = "Food and menu";
+            button16.UseVisualStyleBackColor = false;
+            // 
+            // comboBox14
+            // 
+            comboBox14.FormattingEnabled = true;
+            comboBox14.Location = new Point(3, 28);
+            comboBox14.Name = "comboBox14";
+            comboBox14.Size = new Size(222, 23);
+            comboBox14.TabIndex = 38;
+            // 
+            // panel16
+            // 
+            panel16.BackColor = SystemColors.ButtonShadow;
+            panel16.Controls.Add(panel17);
+            panel16.Controls.Add(comboBox13);
+            panel16.Controls.Add(button9);
+            panel16.Controls.Add(button8);
+            panel16.Location = new Point(8895, 0);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(225, 442);
+            panel16.TabIndex = 38;
+            // 
+            // panel17
+            // 
+            panel17.Controls.Add(button11);
+            panel17.Controls.Add(button10);
+            panel17.Location = new Point(3, 234);
+            panel17.Name = "panel17";
+            panel17.Size = new Size(218, 123);
+            panel17.TabIndex = 41;
+            // 
+            // button11
+            // 
+            button11.BackColor = Color.DimGray;
+            button11.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button11.ForeColor = Color.Crimson;
+            button11.Location = new Point(1, 90);
+            button11.Name = "button11";
+            button11.Size = new Size(218, 30);
+            button11.TabIndex = 42;
+            button11.Text = "Delete";
+            button11.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            button10.BackColor = Color.Azure;
+            button10.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button10.ForeColor = Color.Teal;
+            button10.Location = new Point(-3, 54);
+            button10.Name = "button10";
+            button10.Size = new Size(218, 30);
+            button10.TabIndex = 42;
+            button10.Text = "Update";
+            button10.UseVisualStyleBackColor = false;
+            // 
+            // comboBox13
+            // 
+            comboBox13.FormattingEnabled = true;
+            comboBox13.Location = new Point(2, 31);
+            comboBox13.Name = "comboBox13";
+            comboBox13.Size = new Size(219, 23);
+            comboBox13.TabIndex = 40;
+            // 
+            // button9
+            // 
+            button9.BackColor = Color.Azure;
+            button9.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button9.ForeColor = Color.Teal;
+            button9.Location = new Point(3, 407);
+            button9.Name = "button9";
+            button9.Size = new Size(218, 30);
+            button9.TabIndex = 39;
+            button9.Text = "New reservation";
+            button9.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            button8.BackColor = Color.Azure;
+            button8.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button8.ForeColor = Color.Teal;
+            button8.Location = new Point(2, 365);
+            button8.Name = "button8";
+            button8.Size = new Size(218, 30);
+            button8.TabIndex = 38;
+            button8.Text = "Edit existing Reservation";
+            button8.UseVisualStyleBackColor = false;
+            // 
+            // panel15
+            // 
+            panel15.BackColor = SystemColors.AppWorkspace;
+            panel15.Controls.Add(button7);
+            panel15.Controls.Add(button6);
+            panel15.Controls.Add(checkBox3);
+            panel15.Controls.Add(checkBox2);
+            panel15.Controls.Add(checkBox1);
+            panel15.Controls.Add(button5);
+            panel15.Controls.Add(dateTimePicker2);
+            panel15.Controls.Add(dateTimePicker1);
+            panel15.Controls.Add(comboBox11);
+            panel15.Controls.Add(comboBox12);
+            panel15.Controls.Add(comboBox10);
+            panel15.Controls.Add(comboBox9);
+            panel15.Controls.Add(comboBox8);
+            panel15.Location = new Point(292, 3);
+            panel15.Name = "panel15";
+            panel15.Size = new Size(297, 439);
+            panel15.TabIndex = 25;
+            // 
+            // button7
+            // 
+            button7.BackColor = Color.Azure;
+            button7.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button7.ForeColor = Color.Teal;
+            button7.Location = new Point(22, 402);
+            button7.Name = "button7";
+            button7.Size = new Size(252, 37);
+            button7.TabIndex = 37;
+            button7.Text = "Submit";
+            button7.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.Azure;
+            button6.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button6.ForeColor = Color.Teal;
+            button6.Location = new Point(22, 359);
+            button6.Name = "button6";
+            button6.Size = new Size(252, 37);
+            button6.TabIndex = 36;
+            button6.Text = "Finalize bill";
+            button6.UseVisualStyleBackColor = false;
+            // 
+            // checkBox3
+            // 
+            checkBox3.AutoSize = true;
+            checkBox3.Location = new Point(157, 339);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(136, 19);
+            checkBox3.TabIndex = 35;
+            checkBox3.Text = "Food/Supply status ?";
+            checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.Location = new Point(79, 338);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(81, 19);
+            checkBox2.TabIndex = 34;
+            checkBox2.Text = "Send sms?";
+            checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(0, 338);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(80, 19);
+            checkBox1.TabIndex = 33;
+            checkBox1.Text = "Check in ?";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.Azure;
+            button5.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button5.ForeColor = Color.Teal;
+            button5.Location = new Point(22, 289);
+            button5.Name = "button5";
+            button5.Size = new Size(252, 37);
+            button5.TabIndex = 32;
+            button5.Text = "Food and menu";
+            button5.UseVisualStyleBackColor = false;
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Location = new Point(5, 245);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(276, 23);
+            dateTimePicker2.TabIndex = 31;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(5, 192);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(283, 23);
+            dateTimePicker1.TabIndex = 30;
+            // 
+            // comboBox11
+            // 
+            comboBox11.FormattingEnabled = true;
+            comboBox11.Location = new Point(152, 82);
+            comboBox11.Name = "comboBox11";
+            comboBox11.Size = new Size(136, 23);
+            comboBox11.TabIndex = 29;
+            // 
+            // comboBox12
+            // 
+            comboBox12.FormattingEnabled = true;
+            comboBox12.Location = new Point(5, 82);
+            comboBox12.Name = "comboBox12";
+            comboBox12.Size = new Size(141, 23);
+            comboBox12.TabIndex = 28;
+            // 
+            // comboBox10
+            // 
+            comboBox10.FormattingEnabled = true;
+            comboBox10.Location = new Point(152, 28);
+            comboBox10.Name = "comboBox10";
+            comboBox10.Size = new Size(140, 23);
+            comboBox10.TabIndex = 27;
+            // 
+            // comboBox9
+            // 
+            comboBox9.FormattingEnabled = true;
+            comboBox9.Location = new Point(5, 28);
+            comboBox9.Name = "comboBox9";
+            comboBox9.Size = new Size(141, 23);
+            comboBox9.TabIndex = 26;
+            // 
+            // comboBox8
+            // 
+            comboBox8.FormattingEnabled = true;
+            comboBox8.Location = new Point(5, 140);
+            comboBox8.Name = "comboBox8";
+            comboBox8.Size = new Size(283, 23);
+            comboBox8.TabIndex = 25;
             // 
             // panel4
             // 
@@ -327,6 +623,13 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(283, 439);
             panel4.TabIndex = 0;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(3, 303);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(137, 23);
+            textBox5.TabIndex = 24;
             // 
             // label12
             // 
@@ -521,237 +824,73 @@
             textBox1.Size = new Size(137, 23);
             textBox1.TabIndex = 0;
             // 
-            // textBox5
+            // panel19
             // 
-            textBox5.Location = new Point(3, 303);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(137, 23);
-            textBox5.TabIndex = 24;
+            panel19.Controls.Add(panel18);
+            panel19.Controls.Add(panel3);
+            panel19.Location = new Point(9000, 0);
+            panel19.Name = "panel19";
+            panel19.Size = new Size(885, 445);
+            panel19.TabIndex = 0;
+            panel19.TabStop = true;
             // 
-            // panel15
+            // panel18
             // 
-            panel15.BackColor = SystemColors.AppWorkspace;
-            panel15.Controls.Add(button7);
-            panel15.Controls.Add(button6);
-            panel15.Controls.Add(checkBox3);
-            panel15.Controls.Add(checkBox2);
-            panel15.Controls.Add(checkBox1);
-            panel15.Controls.Add(button5);
-            panel15.Controls.Add(dateTimePicker2);
-            panel15.Controls.Add(dateTimePicker1);
-            panel15.Controls.Add(comboBox11);
-            panel15.Controls.Add(comboBox12);
-            panel15.Controls.Add(comboBox10);
-            panel15.Controls.Add(comboBox9);
-            panel15.Controls.Add(comboBox8);
-            panel15.Location = new Point(292, 3);
-            panel15.Name = "panel15";
-            panel15.Size = new Size(297, 439);
-            panel15.TabIndex = 25;
+            panel18.Location = new Point(0, 0);
+            panel18.Name = "panel18";
+            panel18.Size = new Size(200, 100);
+            panel18.TabIndex = 2;
             // 
-            // comboBox8
+            // Search
             // 
-            comboBox8.FormattingEnabled = true;
-            comboBox8.Location = new Point(5, 140);
-            comboBox8.Name = "comboBox8";
-            comboBox8.Size = new Size(283, 23);
-            comboBox8.TabIndex = 25;
+            Search.Controls.Add(button13);
+            Search.Controls.Add(textBox7);
+            Search.Location = new Point(2975, 128);
+            Search.Name = "Search";
+            Search.Size = new Size(738, 179);
+            Search.TabIndex = 3;
             // 
-            // comboBox9
+            // button13
             // 
-            comboBox9.FormattingEnabled = true;
-            comboBox9.Location = new Point(5, 28);
-            comboBox9.Name = "comboBox9";
-            comboBox9.Size = new Size(141, 23);
-            comboBox9.TabIndex = 26;
+            button13.Location = new Point(621, 69);
+            button13.Name = "button13";
+            button13.Size = new Size(75, 23);
+            button13.TabIndex = 1;
+            button13.Text = "button13";
+            button13.UseVisualStyleBackColor = true;
             // 
-            // comboBox10
+            // textBox7
             // 
-            comboBox10.FormattingEnabled = true;
-            comboBox10.Location = new Point(152, 28);
-            comboBox10.Name = "comboBox10";
-            comboBox10.Size = new Size(140, 23);
-            comboBox10.TabIndex = 27;
+            textBox7.Location = new Point(134, 70);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(445, 23);
+            textBox7.TabIndex = 0;
             // 
-            // comboBox11
+            // Grid
             // 
-            comboBox11.FormattingEnabled = true;
-            comboBox11.Location = new Point(152, 82);
-            comboBox11.Name = "comboBox11";
-            comboBox11.Size = new Size(136, 23);
-            comboBox11.TabIndex = 29;
+            Grid.Controls.Add(dataGridView1);
+            Grid.Location = new Point(9876, 6);
+            Grid.Name = "Grid";
+            Grid.Size = new Size(836, 427);
+            Grid.TabIndex = 4;
+            Grid.Visible = false;
             // 
-            // comboBox12
+            // dataGridView1
             // 
-            comboBox12.FormattingEnabled = true;
-            comboBox12.Location = new Point(5, 82);
-            comboBox12.Name = "comboBox12";
-            comboBox12.Size = new Size(141, 23);
-            comboBox12.TabIndex = 28;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(5, 192);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(283, 23);
-            dateTimePicker1.TabIndex = 30;
-            // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Location = new Point(5, 245);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(276, 23);
-            dateTimePicker2.TabIndex = 31;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.Azure;
-            button5.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.ForeColor = Color.Teal;
-            button5.Location = new Point(22, 289);
-            button5.Name = "button5";
-            button5.Size = new Size(252, 37);
-            button5.TabIndex = 32;
-            button5.Text = "Food and menu";
-            button5.UseVisualStyleBackColor = false;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(0, 338);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(80, 19);
-            checkBox1.TabIndex = 33;
-            checkBox1.Text = "Check in ?";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(79, 338);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(81, 19);
-            checkBox2.TabIndex = 34;
-            checkBox2.Text = "Send sms?";
-            checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(157, 339);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(136, 19);
-            checkBox3.TabIndex = 35;
-            checkBox3.Text = "Food/Supply status ?";
-            checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            button6.BackColor = Color.Azure;
-            button6.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button6.ForeColor = Color.Teal;
-            button6.Location = new Point(22, 359);
-            button6.Name = "button6";
-            button6.Size = new Size(252, 37);
-            button6.TabIndex = 36;
-            button6.Text = "Finalize bill";
-            button6.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            button7.BackColor = Color.Azure;
-            button7.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button7.ForeColor = Color.Teal;
-            button7.Location = new Point(22, 402);
-            button7.Name = "button7";
-            button7.Size = new Size(252, 37);
-            button7.TabIndex = 37;
-            button7.Text = "Submit";
-            button7.UseVisualStyleBackColor = false;
-            // 
-            // panel16
-            // 
-            panel16.BackColor = SystemColors.ButtonShadow;
-            panel16.Controls.Add(panel17);
-            panel16.Controls.Add(comboBox13);
-            panel16.Controls.Add(button9);
-            panel16.Controls.Add(button8);
-            panel16.Location = new Point(595, 0);
-            panel16.Name = "panel16";
-            panel16.Size = new Size(225, 442);
-            panel16.TabIndex = 38;
-            // 
-            // button8
-            // 
-            button8.BackColor = Color.Azure;
-            button8.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button8.ForeColor = Color.Teal;
-            button8.Location = new Point(2, 365);
-            button8.Name = "button8";
-            button8.Size = new Size(218, 30);
-            button8.TabIndex = 38;
-            button8.Text = "Edit existing Reservation";
-            button8.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            button9.BackColor = Color.Azure;
-            button9.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button9.ForeColor = Color.Teal;
-            button9.Location = new Point(3, 407);
-            button9.Name = "button9";
-            button9.Size = new Size(218, 30);
-            button9.TabIndex = 39;
-            button9.Text = "New reservation";
-            button9.UseVisualStyleBackColor = false;
-            // 
-            // comboBox13
-            // 
-            comboBox13.FormattingEnabled = true;
-            comboBox13.Location = new Point(2, 31);
-            comboBox13.Name = "comboBox13";
-            comboBox13.Size = new Size(219, 23);
-            comboBox13.TabIndex = 40;
-            // 
-            // panel17
-            // 
-            panel17.Controls.Add(button11);
-            panel17.Controls.Add(button10);
-            panel17.Location = new Point(3, 234);
-            panel17.Name = "panel17";
-            panel17.Size = new Size(218, 123);
-            panel17.TabIndex = 41;
-            // 
-            // button10
-            // 
-            button10.BackColor = Color.Azure;
-            button10.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button10.ForeColor = Color.Teal;
-            button10.Location = new Point(-3, 54);
-            button10.Name = "button10";
-            button10.Size = new Size(218, 30);
-            button10.TabIndex = 42;
-            button10.Text = "Update";
-            button10.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            button11.BackColor = Color.DimGray;
-            button11.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button11.ForeColor = Color.Crimson;
-            button11.Location = new Point(1, 90);
-            button11.Name = "button11";
-            button11.Size = new Size(218, 30);
-            button11.TabIndex = 42;
-            button11.Text = "Delete";
-            button11.UseVisualStyleBackColor = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(1, 3);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(832, 421);
+            dataGridView1.TabIndex = 0;
             // 
             // FrontEnd
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1045, 445);
-            Controls.Add(panel3);
+            ClientSize = new Size(1074, 445);
+            Controls.Add(Grid);
+            Controls.Add(Search);
+            Controls.Add(panel19);
             Controls.Add(flowLayoutPanel1);
             Name = "FrontEnd";
             Text = "FrontEnd";
@@ -763,12 +902,18 @@
             panel11.ResumeLayout(false);
             panel13.ResumeLayout(false);
             panel3.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel15.ResumeLayout(false);
-            panel15.PerformLayout();
+            PArt3.ResumeLayout(false);
             panel16.ResumeLayout(false);
             panel17.ResumeLayout(false);
+            panel15.ResumeLayout(false);
+            panel15.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel19.ResumeLayout(false);
+            Search.ResumeLayout(false);
+            Search.PerformLayout();
+            Grid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -840,5 +985,17 @@
         private Button button11;
         private Button button10;
         private ComboBox comboBox13;
+        private Panel panel19;
+        private Panel Search;
+        private Button button13;
+        private TextBox textBox7;
+        private Panel PArt3;
+        private Button button18;
+        private Button button17;
+        private Button button16;
+        private ComboBox comboBox14;
+        private Panel panel18;
+        private Panel Grid;
+        private DataGridView dataGridView1;
     }
 }
