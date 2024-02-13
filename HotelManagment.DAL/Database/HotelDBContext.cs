@@ -33,7 +33,7 @@ namespace HotelManagment.DAL.Database
 
         public DbSet<MealInfo> MealInfos { get; set; }
 
-
+        public DbSet<DailyDiningBundle> DailyDiningBundle {  get; set; }
 
 
     }

@@ -12,13 +12,13 @@ namespace HotelManagment.DAL.Entities.Reservations.Services
     public class DailyDiningBundle
     {
         [Key]
-        public int ID { get; set; }
-        public DailyDiningBundleType Type { get; set; }
-        public decimal Price { get; set; }
+        public int? ID { get; set; }
+        public DailyDiningBundleType? Type { get; set; }
+        public decimal? Price { get; set; }
 
         [ForeignKey("MealInfo")]
-        public int MealInfoID { get; set; }
+        public int? MealInfoID { get; set; }
         
-        public MealInfo MealInfo { get; set; }
+        public MealInfo? MealInfo { get; set; }
     }
 }

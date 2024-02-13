@@ -88,6 +88,15 @@
             button10 = new Button();
             comboBox13 = new ComboBox();
             panel15 = new Panel();
+            label27 = new Label();
+            label26 = new Label();
+            label25 = new Label();
+            label24 = new Label();
+            label22 = new Label();
+            label21 = new Label();
+            RoomPrice = new TextBox();
+            RoomType = new TextBox();
+            Floor = new TextBox();
             button19 = new Button();
             button20 = new Button();
             checkBox4 = new CheckBox();
@@ -96,11 +105,7 @@
             button21 = new Button();
             dateTimePicker3 = new DateTimePicker();
             dateTimePicker4 = new DateTimePicker();
-            comboBox16 = new ComboBox();
-            comboBox17 = new ComboBox();
-            comboBox18 = new ComboBox();
-            comboBox19 = new ComboBox();
-            comboBox20 = new ComboBox();
+            RoomNUMID = new ComboBox();
             panel4 = new Panel();
             EmailAdress = new Label();
             textBox6 = new TextBox();
@@ -746,6 +751,15 @@
             // panel15
             // 
             panel15.BackColor = SystemColors.AppWorkspace;
+            panel15.Controls.Add(label27);
+            panel15.Controls.Add(label26);
+            panel15.Controls.Add(label25);
+            panel15.Controls.Add(label24);
+            panel15.Controls.Add(label22);
+            panel15.Controls.Add(label21);
+            panel15.Controls.Add(RoomPrice);
+            panel15.Controls.Add(RoomType);
+            panel15.Controls.Add(Floor);
             panel15.Controls.Add(button19);
             panel15.Controls.Add(button20);
             panel15.Controls.Add(checkBox4);
@@ -754,15 +768,86 @@
             panel15.Controls.Add(button21);
             panel15.Controls.Add(dateTimePicker3);
             panel15.Controls.Add(dateTimePicker4);
-            panel15.Controls.Add(comboBox16);
-            panel15.Controls.Add(comboBox17);
-            panel15.Controls.Add(comboBox18);
-            panel15.Controls.Add(comboBox19);
-            panel15.Controls.Add(comboBox20);
+            panel15.Controls.Add(RoomNUMID);
             panel15.Location = new Point(292, 3);
             panel15.Name = "panel15";
             panel15.Size = new Size(297, 439);
             panel15.TabIndex = 25;
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Location = new Point(5, 227);
+            label27.Name = "label27";
+            label27.Size = new Size(93, 15);
+            label27.TabIndex = 43;
+            label27.Text = "Deperture [date]";
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Location = new Point(5, 174);
+            label26.Name = "label26";
+            label26.Size = new Size(68, 15);
+            label26.TabIndex = 42;
+            label26.Text = "Entry [date]";
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Location = new Point(157, 64);
+            label25.Name = "label25";
+            label25.Size = new Size(33, 15);
+            label25.TabIndex = 41;
+            label25.Text = "Price";
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Location = new Point(0, 65);
+            label24.Name = "label24";
+            label24.Size = new Size(69, 15);
+            label24.TabIndex = 40;
+            label24.Text = "Room Floor";
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Location = new Point(156, 10);
+            label22.Name = "label22";
+            label22.Size = new Size(66, 15);
+            label22.TabIndex = 28;
+            label22.Text = "Room Type";
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Location = new Point(3, 10);
+            label21.Name = "label21";
+            label21.Size = new Size(86, 15);
+            label21.TabIndex = 28;
+            label21.Text = "Room Number";
+            // 
+            // RoomPrice
+            // 
+            RoomPrice.Location = new Point(156, 82);
+            RoomPrice.Name = "RoomPrice";
+            RoomPrice.Size = new Size(137, 23);
+            RoomPrice.TabIndex = 39;
+            // 
+            // RoomType
+            // 
+            RoomType.Location = new Point(157, 28);
+            RoomType.Name = "RoomType";
+            RoomType.Size = new Size(137, 23);
+            RoomType.TabIndex = 38;
+            // 
+            // Floor
+            // 
+            Floor.Location = new Point(3, 82);
+            Floor.Name = "Floor";
+            Floor.Size = new Size(137, 23);
+            Floor.TabIndex = 28;
             // 
             // button19
             // 
@@ -830,12 +915,13 @@
             button21.TabIndex = 32;
             button21.Text = "Food and menu";
             button21.UseVisualStyleBackColor = false;
+            button21.Click += button21_Click;
             // 
             // dateTimePicker3
             // 
             dateTimePicker3.Location = new Point(5, 245);
             dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(276, 23);
+            dateTimePicker3.Size = new Size(283, 23);
             dateTimePicker3.TabIndex = 31;
             // 
             // dateTimePicker4
@@ -845,45 +931,13 @@
             dateTimePicker4.Size = new Size(283, 23);
             dateTimePicker4.TabIndex = 30;
             // 
-            // comboBox16
+            // RoomNUMID
             // 
-            comboBox16.FormattingEnabled = true;
-            comboBox16.Location = new Point(152, 82);
-            comboBox16.Name = "comboBox16";
-            comboBox16.Size = new Size(136, 23);
-            comboBox16.TabIndex = 29;
-            // 
-            // comboBox17
-            // 
-            comboBox17.FormattingEnabled = true;
-            comboBox17.Location = new Point(5, 82);
-            comboBox17.Name = "comboBox17";
-            comboBox17.Size = new Size(141, 23);
-            comboBox17.TabIndex = 28;
-            // 
-            // comboBox18
-            // 
-            comboBox18.FormattingEnabled = true;
-            comboBox18.Location = new Point(152, 28);
-            comboBox18.Name = "comboBox18";
-            comboBox18.Size = new Size(140, 23);
-            comboBox18.TabIndex = 27;
-            // 
-            // comboBox19
-            // 
-            comboBox19.FormattingEnabled = true;
-            comboBox19.Location = new Point(5, 28);
-            comboBox19.Name = "comboBox19";
-            comboBox19.Size = new Size(141, 23);
-            comboBox19.TabIndex = 26;
-            // 
-            // comboBox20
-            // 
-            comboBox20.FormattingEnabled = true;
-            comboBox20.Location = new Point(5, 140);
-            comboBox20.Name = "comboBox20";
-            comboBox20.Size = new Size(283, 23);
-            comboBox20.TabIndex = 25;
+            RoomNUMID.FormattingEnabled = true;
+            RoomNUMID.Location = new Point(5, 28);
+            RoomNUMID.Name = "RoomNUMID";
+            RoomNUMID.Size = new Size(141, 23);
+            RoomNUMID.TabIndex = 26;
             // 
             // panel4
             // 
@@ -1299,8 +1353,7 @@
         private ComboBox comboBox16;
         private ComboBox comboBox17;
         private ComboBox comboBox18;
-        private ComboBox comboBox19;
-        private ComboBox comboBox20;
+        private ComboBox RoomNUMID;
         private Panel panel4;
         private TextBox ZipCodeCombo;
         private Label label11;
@@ -1336,5 +1389,14 @@
         private TextBox YearText;
         private Label EmailAdress;
         private TextBox textBox6;
+        private TextBox RoomPrice;
+        private TextBox RoomType;
+        private TextBox Floor;
+        private Label label25;
+        private Label label24;
+        private Label label22;
+        private Label label21;
+        private Label label27;
+        private Label label26;
     }
 }
