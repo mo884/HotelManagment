@@ -35,6 +35,7 @@ namespace HotelManagment.DAL.Database
 
         public DbSet<DailyDiningBundle> DailyDiningBundle {  get; set; }
 
+        public DbSet<Housekeeping> Housekeeping { get; set; }
 
     }
 }

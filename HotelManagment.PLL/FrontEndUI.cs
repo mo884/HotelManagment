@@ -4,6 +4,9 @@ using HotelManagment.BLL.Feature.City.Quieries.Reposoratory;
 using HotelManagment.BLL.Feature.Guest.Command.InterFace;
 using HotelManagment.BLL.Feature.Guest.Command.Reposoratory;
 using HotelManagment.BLL.Feature.Guest.ModelVM;
+using HotelManagment.BLL.Feature.Guest.Queries.InterFace;
+using HotelManagment.BLL.Feature.Guest.Queries.Reposoratory;
+using HotelManagment.BLL.Feature.Reservations.Command;
 using HotelManagment.BLL.Feature.RoomRep.Queries.Interface;
 using HotelManagment.BLL.Feature.RoomRep.Queries.Reposoratory;
 using HotelManagment.BLL.Feature.State.Quieries.Interface;
@@ -12,13 +15,18 @@ using HotelManagment.BLL.Feature.Streets.ModelVM;
 using HotelManagment.BLL.Feature.Streets.Quieries.Interface;
 using HotelManagment.BLL.Feature.Streets.Quieries.Reposoratory;
 using HotelManagment.BLL.Helpers;
+using HotelManagment.DAL.Database;
 using HotelManagment.DAL.Entities.Adress;
+using HotelManagment.DAL.Entities.GuestInfo;
 using HotelManagment.DAL.Entities.GuestInfo.Enum;
+using HotelManagment.DAL.Entities.Reservations;
+using HotelManagment.DAL.Entities.RoomInfo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -35,7 +43,9 @@ namespace HotelManagment.PLL
         IGetAllStateRep getAllStateRep;
         IGetStreetByCityName GetStreetByCityName;
         IGetAllRoomRep getAllRoomRep;
-        
+        IGetAllGuestRep getAllGuestRep;
+        IAddReservation addReservation;
+
         private FoodForm foodForm;
         public FrontEndUI()
         {
@@ -45,6 +55,8 @@ namespace HotelManagment.PLL
             GetStreetByCityName = new GetStreetByCityName();
             addGuestRep = new AddGuestRep();
             getAllRoomRep = new GetAllRoomRep();
+            getAllGuestRep = new GetAllGuestRep();
+            addReservation = new AddReservationRep();
             dateTimePicker4.MinDate = DateTime.Today;
             dateTimePicker3.MinDate = DateTime.Today.AddDays(1);
             foodForm = new FoodForm();
@@ -115,12 +127,23 @@ namespace HotelManagment.PLL
                 Phone_number = PhoneNum.Text,
                 StreetID =StreetsSelect.ID
             };
+
+            
+
             addGuestRep.Add(addGuestVM);
+            var room = getAllRoomRep.Get().Where(a=>a.room_number==RoomNUMID.SelectedValue.ToString()).FirstOrDefault();
+            CheckFoodMenue.RoomID =room.ID;
+            if(CheckFoodMenue.ReserveFoodID !=0)
+            {
+                addReservation.Add(new() { GuestID = CheckFoodMenue.GuestID, HousekeepingID =CheckFoodMenue.KeepHousingID, MealInfoID=CheckFoodMenue.ReserveFoodID, RoomID=CheckFoodMenue.RoomID, leaving_time=dateTimePicker4.Value,arrival_time=dateTimePicker3.Value, check_in =true });
+           
+            }
+
         }
         private void button21_Click(object sender, EventArgs e)
         {
-            CheckFoodMenue.ReserveFoodID = 8;
-            CheckFoodMenue.GuestID=1;
+
+
             foodForm.ShowDialog();
         }
         private void button5_Click(object sender, EventArgs e)

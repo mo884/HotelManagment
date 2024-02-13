@@ -29,8 +29,9 @@ namespace HotelManagment.PLL
                     if (AuthenticateUser =="Frontend")
                     {
                         this.Hide();
-                        FrontEnd frontEnd = new();
-                        frontEnd.Show();
+                        FrontEndUI frontEnd = new();
+
+                        frontEnd.ShowDialog();
                     }
                     else
                     {

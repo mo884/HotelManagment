@@ -41,7 +41,7 @@ namespace HotelManagment.DAL.Migrations
 
                     b.HasIndex("StateID");
 
-                    b.ToTable("City");
+                    b.ToTable("City", (string)null);
                 });
 
             modelBuilder.Entity("HotelManagment.DAL.Entities.Adress.State", b =>
@@ -64,7 +64,7 @@ namespace HotelManagment.DAL.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("State");
+                    b.ToTable("State", (string)null);
                 });
 
             modelBuilder.Entity("HotelManagment.DAL.Entities.Adress.Streets", b =>
@@ -86,7 +86,7 @@ namespace HotelManagment.DAL.Migrations
 
                     b.HasIndex("CityID");
 
-                    b.ToTable("Streets");
+                    b.ToTable("Streets", (string)null);
                 });
 
             modelBuilder.Entity("HotelManagment.DAL.Entities.GuestInfo.CreditCared", b =>
@@ -130,7 +130,7 @@ namespace HotelManagment.DAL.Migrations
                     b.HasIndex("GuestID")
                         .IsUnique();
 
-                    b.ToTable("CreditCared");
+                    b.ToTable("CreditCared", (string)null);
                 });
 
             modelBuilder.Entity("HotelManagment.DAL.Entities.GuestInfo.Guest", b =>
@@ -175,7 +175,7 @@ namespace HotelManagment.DAL.Migrations
 
                     b.HasIndex("StreetID");
 
-                    b.ToTable("Guests");
+                    b.ToTable("Guests", (string)null);
                 });
 
             modelBuilder.Entity("HotelManagment.DAL.Entities.Identity.UserIdentity", b =>
@@ -201,7 +201,7 @@ namespace HotelManagment.DAL.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("UserIdentities");
+                    b.ToTable("UserIdentities", (string)null);
                 });
 
             modelBuilder.Entity("HotelManagment.DAL.Entities.Reservations.Resrvations", b =>
@@ -243,7 +243,7 @@ namespace HotelManagment.DAL.Migrations
 
                     b.HasIndex("RoomID");
 
-                    b.ToTable("Resrvations");
+                    b.ToTable("Resrvations", (string)null);
                 });
 
             modelBuilder.Entity("HotelManagment.DAL.Entities.Reservations.Services.DailyDiningBundle", b =>
@@ -267,7 +267,7 @@ namespace HotelManagment.DAL.Migrations
 
                     b.HasIndex("MealInfoID");
 
-                    b.ToTable("DailyDiningBundle");
+                    b.ToTable("DailyDiningBundle", (string)null);
                 });
 
             modelBuilder.Entity("HotelManagment.DAL.Entities.Reservations.Services.Housekeeping", b =>
@@ -289,7 +289,7 @@ namespace HotelManagment.DAL.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Housekeeping");
+                    b.ToTable("Housekeeping", (string)null);
                 });
 
             modelBuilder.Entity("HotelManagment.DAL.Entities.Reservations.Services.MealInfo", b =>
@@ -305,7 +305,7 @@ namespace HotelManagment.DAL.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("MealInfos");
+                    b.ToTable("MealInfos", (string)null);
                 });
 
             modelBuilder.Entity("HotelManagment.DAL.Entities.RoomInfo.Room", b =>
@@ -328,7 +328,7 @@ namespace HotelManagment.DAL.Migrations
 
                     b.HasIndex("RoomTypeID");
 
-                    b.ToTable("Rooms");
+                    b.ToTable("Rooms", (string)null);
                 });
 
             modelBuilder.Entity("HotelManagment.DAL.Entities.RoomInfo.RoomType", b =>
@@ -354,7 +354,7 @@ namespace HotelManagment.DAL.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("RoomType");
+                    b.ToTable("RoomType", (string)null);
                 });
 
             modelBuilder.Entity("HotelManagment.DAL.Entities.Adress.City", b =>

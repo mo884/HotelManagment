@@ -1,5 +1,6 @@
 ﻿using HotelManagment.BLL.Feature.Guest.Command.InterFace;
 using HotelManagment.BLL.Feature.Guest.ModelVM;
+using HotelManagment.BLL.Helpers;
 using HotelManagment.BLL.Mapping.GuestMap.Command;
 using HotelManagment.DAL.Database;
 
@@ -21,6 +22,8 @@ namespace HotelManagment.BLL.Feature.Guest.Command.Reposoratory
                 var Guest = AddGustMapping.Map(addGuestVM);
                 HotelDBContext.Add(Guest);
                 HotelDBContext.SaveChanges();
+
+                CheckFoodMenue.GuestID =HotelDBContext.Guests.OrderByDescending(a=>a.Id).LastOrDefault().Id;
 
             }
             catch (Exception)

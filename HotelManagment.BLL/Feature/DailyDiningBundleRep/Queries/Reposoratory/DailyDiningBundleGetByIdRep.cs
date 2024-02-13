@@ -1,5 +1,6 @@
 ﻿using HotelManagment.BLL.Feature.DailyDiningBundleRep.ModelVM;
 using HotelManagment.BLL.Feature.DailyDiningBundleRep.Queries.Interface;
+using HotelManagment.BLL.Helpers;
 using HotelManagment.DAL.Database;
 using HotelManagment.DAL.Entities.Reservations.Services;
 using Microsoft.EntityFrameworkCore;
@@ -20,7 +21,7 @@ namespace HotelManagment.BLL.Feature.DailyDiningBundleRep.Queries.Reposoratory
         }
         public DailyDiningBundleGetByIdVM GetBYID()
         {
-            var Data = HotelDBContext.MealInfos.Include(a => a.DailyDiningBundle).FirstOrDefault();
+            var Data = HotelDBContext.MealInfos.Where(a=>a.ID==CheckFoodMenue.ReserveFoodID).Include(a => a.DailyDiningBundle).FirstOrDefault();
            
             return new DailyDiningBundleGetByIdVM() { ID =Data.ID, FoodBill=Data.FoodBill, DailyDiningBundle=Data.DailyDiningBundle };
 

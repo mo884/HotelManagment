@@ -12,6 +12,8 @@ namespace HotelManagment.BLL.Helpers
         public static int GuestID { get; set; }
         public static int RoomID { get; set; }
         public static int ReserveFoodID {  get; set; }
+        public static int KeepHousingID { get; set; }
+
         public static DailyDiningBundleVM DailyDiningBundleVM { get; set; }
     }
 }
