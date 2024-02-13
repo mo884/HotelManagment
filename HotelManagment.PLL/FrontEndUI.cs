@@ -119,6 +119,8 @@ namespace HotelManagment.PLL
         }
         private void button21_Click(object sender, EventArgs e)
         {
+            CheckFoodMenue.ReserveFoodID = 8;
+            CheckFoodMenue.GuestID=1;
             foodForm.ShowDialog();
         }
         private void button5_Click(object sender, EventArgs e)

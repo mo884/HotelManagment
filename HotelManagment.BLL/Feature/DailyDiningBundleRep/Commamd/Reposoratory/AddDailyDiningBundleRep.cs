@@ -20,7 +20,7 @@ namespace HotelManagment.BLL.Feature.DailyDiningBundleRep.Commamd.Reposoratory
         }
         public void Add(List<DailyDiningBundleVM> dailyDiningBundleVM)
         {
-            HotelDBContext.MealInfos.Add(new());
+            HotelDBContext.MealInfos.Add(new() { FoodBill = 0});
             HotelDBContext.SaveChanges();
            
 

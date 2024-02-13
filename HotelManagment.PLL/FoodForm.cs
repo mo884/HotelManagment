@@ -1,6 +1,8 @@
 ﻿using HotelManagment.BLL.Feature.DailyDiningBundleRep.Commamd.Interface;
 using HotelManagment.BLL.Feature.DailyDiningBundleRep.Commamd.Reposoratory;
 using HotelManagment.BLL.Feature.DailyDiningBundleRep.ModelVM;
+using HotelManagment.BLL.Feature.DailyDiningBundleRep.Queries.Interface;
+using HotelManagment.BLL.Feature.DailyDiningBundleRep.Queries.Reposoratory;
 using HotelManagment.BLL.Helpers;
 using System;
 using System.Collections.Generic;
@@ -17,15 +19,18 @@ namespace HotelManagment.PLL
     public partial class FoodForm : Form
     {
         IAddDailyDiningBundleRep AddDailyDiningBundleRep;
+        IDailyDiningBundleGetByIdRep DailyDiningBundleGetByIdRep;
         public FoodForm()
         {
             InitializeComponent();
             AddDailyDiningBundleRep = new AddDailyDiningBundleRep();
-            textBox1.Visible = false;
-            textBox2.Visible = false;
-            textBox3.Visible = false;
-
+            DailyDiningBundleGetByIdRep = new DailyDiningBundleGetByIdRep();
+           
+            
         }
+          
+
+       
         List<DailyDiningBundleVM> dailyDiningBundleVM = new List<DailyDiningBundleVM>();
         private void FoodForm_Load(object sender, EventArgs e)
         {
@@ -37,6 +42,41 @@ namespace HotelManagment.PLL
                 checkBox1.Checked=false;
                 checkBox2.Checked=false;
                 checkBox3.Checked=false;
+            }
+
+            if(CheckFoodMenue.ReserveFoodID !=0)
+            {
+
+            }
+
+            textBox1.Visible = false;
+            textBox2.Visible = false;
+            textBox3.Visible = false;
+            checkBox1.Checked=false;
+            checkBox2.Checked=false;
+            checkBox3.Checked=false;
+            if (CheckFoodMenue.ReserveFoodID !=0)
+            {
+                foreach (var item in DailyDiningBundleGetByIdRep.GetBYID().DailyDiningBundle)
+                {
+                    if (item.Type == DAL.Entities.Reservations.Foods.Enum.DailyDiningBundleType.break_fast)
+                    {
+                        checkBox1.Checked=true;
+                        textBox1.Text =((double)item.Price/7).ToString();
+                    }
+                    else if (item.Type == DAL.Entities.Reservations.Foods.Enum.DailyDiningBundleType.dinner)
+                    {
+                        checkBox2.Checked=true;
+                        textBox2.Text =((double)item.Price/15).ToString();
+
+                    }
+                    else if (item.Type == DAL.Entities.Reservations.Foods.Enum.DailyDiningBundleType.lunch)
+                    {
+
+                        checkBox3.Checked=true;
+                        textBox3.Text =((double)item.Price/15).ToString();
+                    }
+                }
             }
         }
 

@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Feature\DailyDiningBundleRep\Queries\" />
     <Folder Include="Feature\RoomRep\Command\" />
   </ItemGroup>
 
