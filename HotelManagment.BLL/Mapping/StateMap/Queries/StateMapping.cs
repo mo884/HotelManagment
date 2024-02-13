@@ -28,7 +28,8 @@ namespace HotelManagment.BLL.Mapping.StateMap.Queries
             {
                 ID = state.ID,
                 StateName = state.StateName,
-                ZIbCode = state.ZIbCode
+                ZIbCode = state.ZIbCode,
+                cities = state.cities
             };
             return getAllStateRep;
         }

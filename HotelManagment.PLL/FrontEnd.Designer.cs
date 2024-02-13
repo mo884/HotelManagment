@@ -31,24 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrontEnd));
             flowLayoutPanel1 = new FlowLayoutPanel();
-            panel1 = new Panel();
-            panel2 = new Panel();
-            button4 = new Button();
-            panel5 = new Panel();
-            panel6 = new Panel();
-            Reservation = new Button();
-            panel7 = new Panel();
-            panel8 = new Panel();
-            panel9 = new Panel();
-            button1 = new Button();
-            panel10 = new Panel();
-            panel11 = new Panel();
-            button2 = new Button();
-            panel12 = new Panel();
-            panel13 = new Panel();
-            button3 = new Button();
-            panel14 = new Panel();
-            timer1 = new System.Windows.Forms.Timer(components);
+            panel19 = new Panel();
             panel3 = new Panel();
             PArt3 = new Panel();
             button18 = new Button();
@@ -101,27 +84,42 @@
             textBox3 = new TextBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
-            panel19 = new Panel();
-            panel18 = new Panel();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            button4 = new Button();
+            panel5 = new Panel();
+            panel6 = new Panel();
+            Reservation = new Button();
+            panel7 = new Panel();
+            panel8 = new Panel();
+            panel9 = new Panel();
+            button1 = new Button();
+            panel10 = new Panel();
+            panel11 = new Panel();
+            button2 = new Button();
+            panel12 = new Panel();
+            panel13 = new Panel();
+            button3 = new Button();
+            panel14 = new Panel();
+            timer1 = new System.Windows.Forms.Timer(components);
             Search = new Panel();
             button13 = new Button();
             textBox7 = new TextBox();
             Grid = new Panel();
             dataGridView1 = new DataGridView();
             flowLayoutPanel1.SuspendLayout();
-            panel1.SuspendLayout();
-            panel5.SuspendLayout();
-            panel6.SuspendLayout();
-            panel9.SuspendLayout();
-            panel11.SuspendLayout();
-            panel13.SuspendLayout();
             panel3.SuspendLayout();
             PArt3.SuspendLayout();
             panel16.SuspendLayout();
             panel17.SuspendLayout();
             panel15.SuspendLayout();
             panel4.SuspendLayout();
-            panel19.SuspendLayout();
+            panel1.SuspendLayout();
+            panel5.SuspendLayout();
+            panel6.SuspendLayout();
+            panel9.SuspendLayout();
+            panel11.SuspendLayout();
+            panel13.SuspendLayout();
             Search.SuspendLayout();
             Grid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -130,6 +128,7 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.BackColor = Color.FromArgb(35, 40, 45);
+            flowLayoutPanel1.Controls.Add(panel19);
             flowLayoutPanel1.Controls.Add(panel1);
             flowLayoutPanel1.Controls.Add(panel5);
             flowLayoutPanel1.Controls.Add(panel9);
@@ -143,168 +142,13 @@
             flowLayoutPanel1.Size = new Size(220, 445);
             flowLayoutPanel1.TabIndex = 0;
             // 
-            // panel1
+            // panel19
             // 
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(button4);
-            panel1.Location = new Point(3, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(200, 54);
-            panel1.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            panel2.Location = new Point(0, 125);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(197, 61);
-            panel2.TabIndex = 2;
-            // 
-            // button4
-            // 
-            button4.Cursor = Cursors.Hand;
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.Location = new Point(-2, 0);
-            button4.Name = "button4";
-            button4.Size = new Size(32, 36);
-            button4.TabIndex = 3;
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
-            // panel5
-            // 
-            panel5.Controls.Add(panel6);
-            panel5.Controls.Add(panel8);
-            panel5.Location = new Point(3, 63);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(200, 74);
-            panel5.TabIndex = 4;
-            // 
-            // panel6
-            // 
-            panel6.Controls.Add(Reservation);
-            panel6.Controls.Add(panel7);
-            panel6.Location = new Point(1, 3);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(217, 71);
-            panel6.TabIndex = 3;
-            // 
-            // Reservation
-            // 
-            Reservation.BackColor = Color.FromArgb(35, 40, 45);
-            Reservation.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Reservation.ForeColor = Color.LightSeaGreen;
-            Reservation.Location = new Point(26, 5);
-            Reservation.Name = "Reservation";
-            Reservation.Size = new Size(168, 61);
-            Reservation.TabIndex = 0;
-            Reservation.Text = "Reservation";
-            Reservation.UseVisualStyleBackColor = false;
-            Reservation.Click += Reservation_Click;
-            // 
-            // panel7
-            // 
-            panel7.Location = new Point(0, 125);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(197, 61);
-            panel7.TabIndex = 2;
-            // 
-            // panel8
-            // 
-            panel8.Location = new Point(0, 125);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(197, 61);
-            panel8.TabIndex = 2;
-            // 
-            // panel9
-            // 
-            panel9.Controls.Add(button1);
-            panel9.Controls.Add(panel10);
-            panel9.Location = new Point(3, 143);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(200, 71);
-            panel9.TabIndex = 4;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(35, 40, 45);
-            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.LightSeaGreen;
-            button1.Location = new Point(27, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(167, 61);
-            button1.TabIndex = 0;
-            button1.Text = "Search";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
-            // panel10
-            // 
-            panel10.Location = new Point(0, 125);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(197, 61);
-            panel10.TabIndex = 2;
-            // 
-            // panel11
-            // 
-            panel11.Controls.Add(button2);
-            panel11.Controls.Add(panel12);
-            panel11.Location = new Point(3, 220);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(200, 71);
-            panel11.TabIndex = 5;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(35, 40, 45);
-            button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.LightSeaGreen;
-            button2.Location = new Point(27, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(167, 61);
-            button2.TabIndex = 0;
-            button2.Text = "View";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
-            // panel12
-            // 
-            panel12.Location = new Point(0, 125);
-            panel12.Name = "panel12";
-            panel12.Size = new Size(197, 61);
-            panel12.TabIndex = 2;
-            // 
-            // panel13
-            // 
-            panel13.Controls.Add(button3);
-            panel13.Controls.Add(panel14);
-            panel13.Location = new Point(3, 297);
-            panel13.Name = "panel13";
-            panel13.Size = new Size(200, 71);
-            panel13.TabIndex = 6;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.FromArgb(35, 40, 45);
-            button3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.LightSeaGreen;
-            button3.Location = new Point(27, 3);
-            button3.Name = "button3";
-            button3.Size = new Size(167, 61);
-            button3.TabIndex = 0;
-            button3.Text = "Avilability";
-            button3.UseVisualStyleBackColor = false;
-            // 
-            // panel14
-            // 
-            panel14.Location = new Point(0, 125);
-            panel14.Name = "panel14";
-            panel14.Size = new Size(197, 61);
-            panel14.TabIndex = 2;
-            // 
-            // timer1
-            // 
-            timer1.Interval = 10;
-            timer1.Tick += timer1_Tick;
+            panel19.Location = new Point(3, 3);
+            panel19.Name = "panel19";
+            panel19.Size = new Size(885, 445);
+            panel19.TabIndex = 0;
+            panel19.TabStop = true;
             // 
             // panel3
             // 
@@ -313,7 +157,7 @@
             panel3.Controls.Add(panel15);
             panel3.Controls.Add(panel4);
             panel3.ImeMode = ImeMode.NoControl;
-            panel3.Location = new Point(3, 3);
+            panel3.Location = new Point(226, 3);
             panel3.Name = "panel3";
             panel3.Size = new Size(823, 442);
             panel3.TabIndex = 1;
@@ -824,22 +668,168 @@
             textBox1.Size = new Size(137, 23);
             textBox1.TabIndex = 0;
             // 
-            // panel19
+            // panel1
             // 
-            panel19.Controls.Add(panel18);
-            panel19.Controls.Add(panel3);
-            panel19.Location = new Point(9000, 0);
-            panel19.Name = "panel19";
-            panel19.Size = new Size(885, 445);
-            panel19.TabIndex = 0;
-            panel19.TabStop = true;
+            panel1.Controls.Add(panel2);
+            panel1.Controls.Add(button4);
+            panel1.Location = new Point(3, 454);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(200, 54);
+            panel1.TabIndex = 1;
             // 
-            // panel18
+            // panel2
             // 
-            panel18.Location = new Point(0, 0);
-            panel18.Name = "panel18";
-            panel18.Size = new Size(200, 100);
-            panel18.TabIndex = 2;
+            panel2.Location = new Point(0, 125);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(197, 61);
+            panel2.TabIndex = 2;
+            // 
+            // button4
+            // 
+            button4.Cursor = Cursors.Hand;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.Location = new Point(-2, 0);
+            button4.Name = "button4";
+            button4.Size = new Size(32, 36);
+            button4.TabIndex = 3;
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(panel6);
+            panel5.Controls.Add(panel8);
+            panel5.Location = new Point(3, 514);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(200, 74);
+            panel5.TabIndex = 4;
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(Reservation);
+            panel6.Controls.Add(panel7);
+            panel6.Location = new Point(1, 3);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(217, 71);
+            panel6.TabIndex = 3;
+            // 
+            // Reservation
+            // 
+            Reservation.BackColor = Color.FromArgb(35, 40, 45);
+            Reservation.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Reservation.ForeColor = Color.LightSeaGreen;
+            Reservation.Location = new Point(26, 5);
+            Reservation.Name = "Reservation";
+            Reservation.Size = new Size(168, 61);
+            Reservation.TabIndex = 0;
+            Reservation.Text = "Reservation";
+            Reservation.UseVisualStyleBackColor = false;
+            Reservation.Click += Reservation_Click;
+            // 
+            // panel7
+            // 
+            panel7.Location = new Point(0, 125);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(197, 61);
+            panel7.TabIndex = 2;
+            // 
+            // panel8
+            // 
+            panel8.Location = new Point(0, 125);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(197, 61);
+            panel8.TabIndex = 2;
+            // 
+            // panel9
+            // 
+            panel9.Controls.Add(button1);
+            panel9.Controls.Add(panel10);
+            panel9.Location = new Point(3, 594);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(200, 71);
+            panel9.TabIndex = 4;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(35, 40, 45);
+            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.LightSeaGreen;
+            button1.Location = new Point(27, 3);
+            button1.Name = "button1";
+            button1.Size = new Size(167, 61);
+            button1.TabIndex = 0;
+            button1.Text = "Search";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // panel10
+            // 
+            panel10.Location = new Point(0, 125);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(197, 61);
+            panel10.TabIndex = 2;
+            // 
+            // panel11
+            // 
+            panel11.Controls.Add(button2);
+            panel11.Controls.Add(panel12);
+            panel11.Location = new Point(3, 671);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(200, 71);
+            panel11.TabIndex = 5;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(35, 40, 45);
+            button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.LightSeaGreen;
+            button2.Location = new Point(27, 3);
+            button2.Name = "button2";
+            button2.Size = new Size(167, 61);
+            button2.TabIndex = 0;
+            button2.Text = "View";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // panel12
+            // 
+            panel12.Location = new Point(0, 125);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(197, 61);
+            panel12.TabIndex = 2;
+            // 
+            // panel13
+            // 
+            panel13.Controls.Add(button3);
+            panel13.Controls.Add(panel14);
+            panel13.Location = new Point(3, 748);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(200, 71);
+            panel13.TabIndex = 6;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(35, 40, 45);
+            button3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.ForeColor = Color.LightSeaGreen;
+            button3.Location = new Point(27, 3);
+            button3.Name = "button3";
+            button3.Size = new Size(167, 61);
+            button3.TabIndex = 0;
+            button3.Text = "Avilability";
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // panel14
+            // 
+            panel14.Location = new Point(0, 125);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(197, 61);
+            panel14.TabIndex = 2;
+            // 
+            // timer1
+            // 
+            timer1.Interval = 10;
+            timer1.Tick += timer1_Tick;
             // 
             // Search
             // 
@@ -888,19 +878,14 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1074, 445);
+            Controls.Add(panel3);
             Controls.Add(Grid);
             Controls.Add(Search);
-            Controls.Add(panel19);
             Controls.Add(flowLayoutPanel1);
             Name = "FrontEnd";
             Text = "FrontEnd";
+            Load += FrontEnd_Load;
             flowLayoutPanel1.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            panel5.ResumeLayout(false);
-            panel6.ResumeLayout(false);
-            panel9.ResumeLayout(false);
-            panel11.ResumeLayout(false);
-            panel13.ResumeLayout(false);
             panel3.ResumeLayout(false);
             PArt3.ResumeLayout(false);
             panel16.ResumeLayout(false);
@@ -909,7 +894,12 @@
             panel15.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
-            panel19.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            panel9.ResumeLayout(false);
+            panel11.ResumeLayout(false);
+            panel13.ResumeLayout(false);
             Search.ResumeLayout(false);
             Search.PerformLayout();
             Grid.ResumeLayout(false);
@@ -938,19 +928,41 @@
         private Button button3;
         private Panel panel14;
         private System.Windows.Forms.Timer timer1;
+        private Panel Search;
+        private Button button13;
+        private TextBox textBox7;
+        private Panel Grid;
+        private DataGridView dataGridView1;
+        private Panel panel19;
         private Panel panel3;
+        private Panel PArt3;
+        private Button button18;
+        private Button button17;
+        private Button button16;
+        private ComboBox comboBox14;
+        private Panel panel16;
+        private Panel panel17;
+        private Button button11;
+        private Button button10;
+        private ComboBox comboBox13;
+        private Button button9;
+        private Button button8;
+        private Panel panel15;
+        private Button button7;
+        private Button button6;
+        private CheckBox checkBox3;
+        private CheckBox checkBox2;
+        private CheckBox checkBox1;
+        private Button button5;
+        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dateTimePicker1;
+        private ComboBox comboBox11;
+        private ComboBox comboBox12;
+        private ComboBox comboBox10;
+        private ComboBox comboBox9;
+        private ComboBox comboBox8;
         private Panel panel4;
-        private ComboBox comboBox3;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private ComboBox comboBox6;
-        private ComboBox comboBox5;
-        private ComboBox comboBox4;
-        private ComboBox comboBox7;
+        private TextBox textBox5;
         private Label label12;
         private Label LastName;
         private Label label10;
@@ -963,39 +975,16 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox textBox5;
-        private Panel panel15;
-        private ComboBox comboBox11;
-        private ComboBox comboBox12;
-        private ComboBox comboBox10;
-        private ComboBox comboBox9;
-        private ComboBox comboBox8;
-        private Button button5;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker1;
-        private CheckBox checkBox3;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
-        private Panel panel16;
-        private Button button9;
-        private Button button8;
-        private Button button7;
-        private Button button6;
-        private Panel panel17;
-        private Button button11;
-        private Button button10;
-        private ComboBox comboBox13;
-        private Panel panel19;
-        private Panel Search;
-        private Button button13;
-        private TextBox textBox7;
-        private Panel PArt3;
-        private Button button18;
-        private Button button17;
-        private Button button16;
-        private ComboBox comboBox14;
-        private Panel panel18;
-        private Panel Grid;
-        private DataGridView dataGridView1;
+        private ComboBox comboBox7;
+        private ComboBox comboBox6;
+        private ComboBox comboBox5;
+        private ComboBox comboBox4;
+        private ComboBox comboBox3;
+        private ComboBox comboBox2;
+        private ComboBox comboBox1;
+        private TextBox textBox4;
+        private TextBox textBox3;
+        private TextBox textBox2;
+        private TextBox textBox1;
     }
 }

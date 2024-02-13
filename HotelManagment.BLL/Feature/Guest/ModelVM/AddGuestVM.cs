@@ -11,8 +11,7 @@ namespace HotelManagment.BLL.Feature.Guest.ModelVM
 {
     public class AddGuestVM
     {
-        [Key]
-        public int Id { get; set; }
+       
         [MaxLength(50), Required]
         public string First_name { get; set; }
         [MaxLength(50), Required]

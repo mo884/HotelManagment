@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HotelManagment.DAL.Entities.Adress;
 
 namespace HotelManagment.BLL.Feature.State.ModelVM
 {
@@ -17,6 +18,6 @@ namespace HotelManagment.BLL.Feature.State.ModelVM
         [MaxLength(50), Required]
         public string StateName { get; set; }
         //Navigation Property
-
+        public List<HotelManagment.DAL.Entities.Adress.City> cities { get; set; }
     }
 }

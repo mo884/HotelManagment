@@ -83,5 +83,10 @@ namespace HotelManagment.PLL
             Grid.Visible =true;
 
         }
+
+        private void FrontEnd_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

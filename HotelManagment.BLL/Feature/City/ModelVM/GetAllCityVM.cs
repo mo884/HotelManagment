@@ -9,7 +9,7 @@ namespace HotelManagment.BLL.Feature.City.ModelVM
     {
         [Key]
         public int ID { get; set; }
-        public int CityName { get; set; }
+        public string CityName { get; set; }
         //Navigation Property
 
         public int StateID { get; set; }
