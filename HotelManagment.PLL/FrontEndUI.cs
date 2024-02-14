@@ -47,9 +47,11 @@ namespace HotelManagment.PLL
         IEditeReservationRep editeReservationRep;
         private FoodForm foodForm;
         IEditGuestRep editGuestRep;
+        IGetGustsByName getGustsByName;
         public FrontEndUI()
         {
             InitializeComponent();
+            
             getAllReservationRepo = new GetAllReservationRepo();
             getAllStateRep = new GetAllStateRep();
             GetStreetByCityName = new GetStreetByCityName();
@@ -67,6 +69,7 @@ namespace HotelManagment.PLL
             DeleteMenuInfoRepo = new DeleteMenuInfoRepo();
             deletHousKeepingRep = new DeletHousKeepingRep();
             StateBindingvar  = new BindingSource(getAllStateRep.GetAll(), "");
+           
         }
 
 
@@ -210,6 +213,7 @@ namespace HotelManagment.PLL
 
             ReservationForm reservationForm = new ReservationForm();
             reservationForm.ShowDialog();
+            this.Hide();
         }
         private void button21_Click(object sender, EventArgs e)
         {
@@ -247,6 +251,9 @@ namespace HotelManagment.PLL
                 editeReservationRep.Edite(new() { GuestID = CheckFoodMenue.GuestID, HousekeepingID =CheckFoodMenue.KeepHousingID, MealInfoID=CheckFoodMenue.ReserveFoodID, RoomID=CheckFoodMenue.RoomID, leaving_time=dateTimePicker4.Value, arrival_time=dateTimePicker3.Value, check_in =checkBox6.Checked });
 
             }
+            this.Hide();
+            FrontEndUI frontEndUI = new FrontEndUI();
+            frontEndUI.Show();
         }
         private void Remove_Click(object sender, EventArgs e)
         {
@@ -262,7 +269,9 @@ namespace HotelManagment.PLL
                 CheckFoodMenue.ReserveFoodID = 0;
                 CheckFoodMenue.RoomID=0;
                 CheckFoodMenue.KeepHousingID=0;
-                this.Refresh();
+                this.Hide();
+                FrontEndUI frontEndUI = new FrontEndUI();
+                frontEndUI.Show();
             }
         }
         private void button5_Click(object sender, EventArgs e)
@@ -341,6 +350,8 @@ namespace HotelManagment.PLL
 
             this.button3.BackColor = color;
             this.button3.ForeColor =Color.LightSeaGreen;
+
+            dataGridView1.DataSource =getAllReservationRepo.GetAll();
         }
 
 
@@ -367,6 +378,10 @@ namespace HotelManagment.PLL
 
             this.button5.BackColor = color;
             this.button5.ForeColor =Color.LightSeaGreen;
+            GetAllRecordRoom getAllRecordRoom = new GetAllRecordRoom();
+            dataGridView2.DataSource =getAllRecordRoom.Get().RroomRecord;
+            dataGridView3.DataSource =getAllRecordRoom.Get().RoomNotRecord;
+
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -378,6 +393,19 @@ namespace HotelManagment.PLL
         {
             CreditCard creditCard = new CreditCard();
             creditCard.ShowDialog();
+        }
+
+        private void Searchbtn_Click(object sender, EventArgs e)
+        {
+            GridPanel.Location = new Point(226, 0);
+            GridPanel.Visible=true;
+            SearchPanal.Location = new Point(99314, 9107);
+            SearchPanal.Visible=false;
+            getGustsByName =new GetGustsByName();
+            //BindingSource bindingSourceGrid = new BindingSource()
+            dataGridView1.DataSource = getGustsByName.Get(textBox11.Text);
+            
+            
         }
     }
 }

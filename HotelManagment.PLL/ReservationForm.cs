@@ -125,9 +125,9 @@ namespace HotelManagment.PLL
                 addReservation.Add(new() { GuestID = CheckFoodMenue.GuestID, HousekeepingID =CheckFoodMenue.KeepHousingID, MealInfoID=CheckFoodMenue.ReserveFoodID, RoomID=CheckFoodMenue.RoomID, leaving_time=dateTimePicker4.Value, arrival_time=dateTimePicker3.Value, check_in =true });
 
             }
-            FrontEndUI frontEndUI = new();
-            frontEndUI.Refresh();
-            this.Close();
+            this.Hide();
+            FrontEndUI frontEndUI = new FrontEndUI();
+            frontEndUI.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

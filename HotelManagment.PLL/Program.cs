@@ -1,3 +1,5 @@
+using HotelManagement.WindowsFormsUI;
+
 namespace HotelManagment.PLL
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace HotelManagment.PLL
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FrontEndUI());
+            Application.Run(new Login());
         }
     }
 }

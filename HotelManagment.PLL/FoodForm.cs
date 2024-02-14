@@ -77,6 +77,12 @@ namespace HotelManagment.PLL
                     checkBox1.Checked = true;
                     textBox1.Text = menuInfoVM.Countbreak_fast.ToString();
                 }
+                else
+                {
+                    checkBox1.Checked=false;
+                    checkBox1.Visible=false;
+
+                }
 
                 if (menuInfoVM.Islunch)
                 {

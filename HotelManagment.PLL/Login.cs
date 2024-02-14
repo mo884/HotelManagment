@@ -3,6 +3,7 @@ using HotelManagment.BLL.Feature.Login.Command.ModelVM;
 using HotelManagment.BLL.Feature.Login.Command.Reposoratory;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using MetroFramework.Forms;
+using HotelManagement.WindowsFormsUI;
 
 namespace HotelManagment.PLL
 {
@@ -35,7 +36,9 @@ namespace HotelManagment.PLL
                     }
                     else
                     {
-
+                        this.Hide();
+                        Kitchen kitchen = new Kitchen();
+                        kitchen.ShowDialog();
                     }
                 }
                 else
