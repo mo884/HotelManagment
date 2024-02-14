@@ -1,13 +1,14 @@
-﻿using System;
+﻿using HotelManagment.DAL.Entities.Reservations;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelManagment.DAL.Entities.Reservations.Services
+namespace HotelManagment.BLL.Feature.MenuInfo.ModelVM
 {
-    public class MealInfo
+    public class MenuInfoVM
     {
         [Key]
         public int ID { get; set; }
@@ -30,6 +31,5 @@ namespace HotelManagment.DAL.Entities.Reservations.Services
 
 
         public List<Resrvations> Resrvations { get; set; }
-
     }
 }

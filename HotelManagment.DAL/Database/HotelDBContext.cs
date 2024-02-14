@@ -1,6 +1,7 @@
 ﻿using HotelManagment.DAL.Entities.Adress;
 using HotelManagment.DAL.Entities.GuestInfo;
 using HotelManagment.DAL.Entities.Identity;
+using HotelManagment.DAL.Entities.Reservations;
 using HotelManagment.DAL.Entities.Reservations.Foods;
 using HotelManagment.DAL.Entities.Reservations.Services;
 using HotelManagment.DAL.Entities.RoomInfo;
@@ -33,9 +34,11 @@ namespace HotelManagment.DAL.Database
 
         public DbSet<MealInfo> MealInfos { get; set; }
 
-        public DbSet<DailyDiningBundle> DailyDiningBundle {  get; set; }
 
         public DbSet<Housekeeping> Housekeeping { get; set; }
+
+        public DbSet<Resrvations> Resrvations { get; set; }
+
 
     }
 }

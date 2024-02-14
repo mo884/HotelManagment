@@ -83,10 +83,11 @@
             textBox1 = new TextBox();
             ReservationFormPanal = new Panel();
             PArt3 = new Panel();
-            button8 = new Button();
-            button9 = new Button();
             button10 = new Button();
             comboBox13 = new ComboBox();
+            panel1 = new Panel();
+            button9 = new Button();
+            Remove = new Button();
             panel15 = new Panel();
             label27 = new Label();
             label26 = new Label();
@@ -110,27 +111,28 @@
             EmailAdress = new Label();
             textBox6 = new TextBox();
             YearText = new TextBox();
-            ZipCodeCombo = new TextBox();
             label11 = new Label();
             label13 = new Label();
             label14 = new Label();
             label15 = new Label();
             label16 = new Label();
-            label17 = new Label();
-            label18 = new Label();
-            label19 = new Label();
-            label20 = new Label();
             PhoneNum = new Label();
             label23 = new Label();
-            Street_AdressCombo = new ComboBox();
-            ComboCityName = new ComboBox();
-            StateName = new ComboBox();
             GenderCombo = new ComboBox();
             DayCombo = new ComboBox();
             MonthCombo = new ComboBox();
             Phone = new TextBox();
             LName = new TextBox();
             FName = new TextBox();
+            panel2 = new Panel();
+            label20 = new Label();
+            ZipCodeCombo = new TextBox();
+            StateName = new ComboBox();
+            label17 = new Label();
+            ComboCityName = new ComboBox();
+            label18 = new Label();
+            Street_AdressCombo = new ComboBox();
+            label19 = new Label();
             SearchPanal = new Panel();
             Searchbtn = new Button();
             textBox11 = new TextBox();
@@ -148,8 +150,10 @@
             Form1.SuspendLayout();
             ReservationFormPanal.SuspendLayout();
             PArt3.SuspendLayout();
+            panel1.SuspendLayout();
             panel15.SuspendLayout();
             panel4.SuspendLayout();
+            panel2.SuspendLayout();
             SearchPanal.SuspendLayout();
             GridPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -695,58 +699,67 @@
             // PArt3
             // 
             PArt3.BackColor = SystemColors.ActiveBorder;
-            PArt3.Controls.Add(button8);
-            PArt3.Controls.Add(button9);
             PArt3.Controls.Add(button10);
             PArt3.Controls.Add(comboBox13);
+            PArt3.Controls.Add(panel1);
             PArt3.Location = new Point(595, 3);
             PArt3.Name = "PArt3";
-            PArt3.Size = new Size(228, 436);
+            PArt3.Size = new Size(306, 436);
             PArt3.TabIndex = 39;
-            // 
-            // button8
-            // 
-            button8.BackColor = Color.Azure;
-            button8.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button8.ForeColor = Color.Teal;
-            button8.Location = new Point(9, 263);
-            button8.Name = "button8";
-            button8.Size = new Size(212, 37);
-            button8.TabIndex = 43;
-            button8.Text = "Food and menu";
-            button8.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            button9.BackColor = Color.Azure;
-            button9.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button9.ForeColor = Color.Teal;
-            button9.Location = new Point(9, 325);
-            button9.Name = "button9";
-            button9.Size = new Size(212, 37);
-            button9.TabIndex = 42;
-            button9.Text = "Food and menu";
-            button9.UseVisualStyleBackColor = false;
             // 
             // button10
             // 
             button10.BackColor = Color.Azure;
             button10.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button10.ForeColor = Color.Teal;
-            button10.Location = new Point(9, 390);
+            button10.Location = new Point(39, 390);
             button10.Name = "button10";
             button10.Size = new Size(212, 37);
             button10.TabIndex = 41;
             button10.Text = "New reservation";
             button10.UseVisualStyleBackColor = false;
+            button10.Click += button10_Click;
             // 
             // comboBox13
             // 
             comboBox13.FormattingEnabled = true;
             comboBox13.Location = new Point(3, 28);
             comboBox13.Name = "comboBox13";
-            comboBox13.Size = new Size(222, 23);
+            comboBox13.Size = new Size(300, 23);
             comboBox13.TabIndex = 38;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(button9);
+            panel1.Controls.Add(Remove);
+            panel1.Location = new Point(12, 289);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(277, 90);
+            panel1.TabIndex = 45;
+            // 
+            // button9
+            // 
+            button9.BackColor = Color.LightSeaGreen;
+            button9.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button9.ForeColor = Color.White;
+            button9.Location = new Point(30, 43);
+            button9.Name = "button9";
+            button9.Size = new Size(212, 37);
+            button9.TabIndex = 42;
+            button9.Text = "Edit";
+            button9.UseVisualStyleBackColor = false;
+            // 
+            // Remove
+            // 
+            Remove.BackColor = Color.Crimson;
+            Remove.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Remove.ForeColor = Color.White;
+            Remove.Location = new Point(30, 3);
+            Remove.Name = "Remove";
+            Remove.Size = new Size(212, 37);
+            Remove.TabIndex = 43;
+            Remove.Text = "Remove";
+            Remove.UseVisualStyleBackColor = false;
             // 
             // panel15
             // 
@@ -945,27 +958,20 @@
             panel4.Controls.Add(EmailAdress);
             panel4.Controls.Add(textBox6);
             panel4.Controls.Add(YearText);
-            panel4.Controls.Add(ZipCodeCombo);
             panel4.Controls.Add(label11);
             panel4.Controls.Add(label13);
             panel4.Controls.Add(label14);
             panel4.Controls.Add(label15);
             panel4.Controls.Add(label16);
-            panel4.Controls.Add(label17);
-            panel4.Controls.Add(label18);
-            panel4.Controls.Add(label19);
-            panel4.Controls.Add(label20);
             panel4.Controls.Add(PhoneNum);
             panel4.Controls.Add(label23);
-            panel4.Controls.Add(Street_AdressCombo);
-            panel4.Controls.Add(ComboCityName);
-            panel4.Controls.Add(StateName);
             panel4.Controls.Add(GenderCombo);
             panel4.Controls.Add(DayCombo);
             panel4.Controls.Add(MonthCombo);
             panel4.Controls.Add(Phone);
             panel4.Controls.Add(LName);
             panel4.Controls.Add(FName);
+            panel4.Controls.Add(panel2);
             panel4.Location = new Point(3, 3);
             panel4.Name = "panel4";
             panel4.Size = new Size(283, 439);
@@ -995,13 +1001,6 @@
             YearText.Name = "YearText";
             YearText.Size = new Size(77, 23);
             YearText.TabIndex = 25;
-            // 
-            // ZipCodeCombo
-            // 
-            ZipCodeCombo.Location = new Point(3, 404);
-            ZipCodeCombo.Name = "ZipCodeCombo";
-            ZipCodeCombo.Size = new Size(137, 23);
-            ZipCodeCombo.TabIndex = 24;
             // 
             // label11
             // 
@@ -1048,43 +1047,6 @@
             label16.TabIndex = 19;
             label16.Text = "Month";
             // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Location = new Point(2, 289);
-            label17.Name = "label17";
-            label17.Size = new Size(65, 15);
-            label17.TabIndex = 18;
-            label17.Text = "StateName";
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Location = new Point(149, 289);
-            label18.Name = "label18";
-            label18.Size = new Size(60, 15);
-            label18.TabIndex = 17;
-            label18.Text = "CityName";
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Location = new Point(12, 385);
-            label19.Name = "label19";
-            label19.Size = new Size(55, 15);
-            label19.TabIndex = 16;
-            label19.Text = "Zip Code";
-            label19.Click += label19_Click;
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Location = new Point(146, 381);
-            label20.Name = "label20";
-            label20.Size = new Size(77, 15);
-            label20.TabIndex = 15;
-            label20.Text = "Street_Adress";
-            // 
             // PhoneNum
             // 
             PhoneNum.AutoSize = true;
@@ -1102,30 +1064,6 @@
             label23.Size = new Size(45, 15);
             label23.TabIndex = 12;
             label23.Text = "Gender";
-            // 
-            // Street_AdressCombo
-            // 
-            Street_AdressCombo.FormattingEnabled = true;
-            Street_AdressCombo.Location = new Point(153, 404);
-            Street_AdressCombo.Name = "Street_AdressCombo";
-            Street_AdressCombo.Size = new Size(130, 23);
-            Street_AdressCombo.TabIndex = 10;
-            // 
-            // ComboCityName
-            // 
-            ComboCityName.FormattingEnabled = true;
-            ComboCityName.Location = new Point(145, 308);
-            ComboCityName.Name = "ComboCityName";
-            ComboCityName.Size = new Size(130, 23);
-            ComboCityName.TabIndex = 9;
-            // 
-            // StateName
-            // 
-            StateName.FormattingEnabled = true;
-            StateName.Location = new Point(2, 308);
-            StateName.Name = "StateName";
-            StateName.Size = new Size(137, 23);
-            StateName.TabIndex = 8;
             // 
             // GenderCombo
             // 
@@ -1153,7 +1091,7 @@
             // 
             // Phone
             // 
-            Phone.Location = new Point(2, 192);
+            Phone.Location = new Point(-3, 191);
             Phone.Name = "Phone";
             Phone.Size = new Size(277, 23);
             Phone.TabIndex = 2;
@@ -1171,6 +1109,88 @@
             FName.Name = "FName";
             FName.Size = new Size(137, 23);
             FName.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(label20);
+            panel2.Controls.Add(ZipCodeCombo);
+            panel2.Controls.Add(StateName);
+            panel2.Controls.Add(label17);
+            panel2.Controls.Add(ComboCityName);
+            panel2.Controls.Add(label18);
+            panel2.Controls.Add(Street_AdressCombo);
+            panel2.Controls.Add(label19);
+            panel2.Location = new Point(3, 278);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(280, 152);
+            panel2.TabIndex = 28;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point(154, 101);
+            label20.Name = "label20";
+            label20.Size = new Size(77, 15);
+            label20.TabIndex = 29;
+            label20.Text = "Street_Adress";
+            // 
+            // ZipCodeCombo
+            // 
+            ZipCodeCombo.Location = new Point(4, 126);
+            ZipCodeCombo.Name = "ZipCodeCombo";
+            ZipCodeCombo.Size = new Size(137, 23);
+            ZipCodeCombo.TabIndex = 31;
+            // 
+            // StateName
+            // 
+            StateName.FormattingEnabled = true;
+            StateName.Location = new Point(3, 30);
+            StateName.Name = "StateName";
+            StateName.Size = new Size(137, 23);
+            StateName.TabIndex = 25;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(3, 11);
+            label17.Name = "label17";
+            label17.Size = new Size(65, 15);
+            label17.TabIndex = 30;
+            label17.Text = "StateName";
+            // 
+            // ComboCityName
+            // 
+            ComboCityName.FormattingEnabled = true;
+            ComboCityName.Location = new Point(146, 30);
+            ComboCityName.Name = "ComboCityName";
+            ComboCityName.Size = new Size(130, 23);
+            ComboCityName.TabIndex = 26;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(150, 11);
+            label18.Name = "label18";
+            label18.Size = new Size(60, 15);
+            label18.TabIndex = 29;
+            label18.Text = "CityName";
+            // 
+            // Street_AdressCombo
+            // 
+            Street_AdressCombo.FormattingEnabled = true;
+            Street_AdressCombo.Location = new Point(146, 126);
+            Street_AdressCombo.Name = "Street_AdressCombo";
+            Street_AdressCombo.Size = new Size(130, 23);
+            Street_AdressCombo.TabIndex = 27;
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point(13, 107);
+            label19.Name = "label19";
+            label19.Size = new Size(55, 15);
+            label19.TabIndex = 28;
+            label19.Text = "Zip Code";
             // 
             // SearchPanal
             // 
@@ -1266,10 +1286,13 @@
             Form1.PerformLayout();
             ReservationFormPanal.ResumeLayout(false);
             PArt3.ResumeLayout(false);
+            panel1.ResumeLayout(false);
             panel15.ResumeLayout(false);
             panel15.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             SearchPanal.ResumeLayout(false);
             SearchPanal.PerformLayout();
             GridPanel.ResumeLayout(false);
@@ -1301,7 +1324,7 @@
         private Button button10;
         private ComboBox comboBox13;
         private Button button9;
-        private Button button8;
+        private Button Remove;
         private Panel Form2;
         private Button button7;
         private Button button6;
@@ -1355,21 +1378,13 @@
         private ComboBox comboBox18;
         private ComboBox RoomNUMID;
         private Panel panel4;
-        private TextBox ZipCodeCombo;
         private Label label11;
         private Label label13;
         private Label label14;
         private Label label15;
         private Label label16;
-        private Label label17;
-        private Label label18;
-        private Label label19;
-        private Label label20;
         private Label PhoneNum;
         private Label label23;
-        private ComboBox Street_AdressCombo;
-        private ComboBox ComboCityName;
-        private ComboBox StateName;
         private ComboBox GenderCombo;
         private ComboBox YearesCombo;
         private ComboBox DayCombo;
@@ -1398,5 +1413,15 @@
         private Label label21;
         private Label label27;
         private Label label26;
+        private Panel panel1;
+        private Panel panel2;
+        private Label label20;
+        private TextBox ZipCodeCombo;
+        private ComboBox StateName;
+        private Label label17;
+        private ComboBox ComboCityName;
+        private Label label18;
+        private ComboBox Street_AdressCombo;
+        private Label label19;
     }
 }

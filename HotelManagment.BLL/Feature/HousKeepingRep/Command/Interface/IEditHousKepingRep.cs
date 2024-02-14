@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelManagment.BLL.Feature.DailyDiningBundleRep.Commamd.Interface
+namespace HotelManagment.BLL.Feature.HousKeepingRep.Command.Interface
 {
-    public interface IAddMailByIDMenue
+    public interface IEditHousKepingRep
     {
-        void Add(DailyDiningBundle dailyDiningBundle);
+        void Edit(Housekeeping housekeeping);
     }
 }

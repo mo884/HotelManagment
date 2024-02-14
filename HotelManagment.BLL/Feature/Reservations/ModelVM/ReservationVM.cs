@@ -1,17 +1,19 @@
-﻿
-
-using HotelManagment.DAL.Entities.GuestInfo;
+﻿using HotelManagment.DAL.Entities.GuestInfo;
 using HotelManagment.DAL.Entities.Reservations.Services;
 using HotelManagment.DAL.Entities.RoomInfo;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace HotelManagment.DAL.Entities.Reservations
+namespace HotelManagment.BLL.Feature.Reservations.ModelVM
 {
-    public class Resrvations
+    public class ReservationVM
     {
         public int ID { get; set; }
-       
+
         public DateTime arrival_time { get; set; }
         public DateTime leaving_time { get; set; }
         public bool check_in { get; set; }
@@ -21,7 +23,7 @@ namespace HotelManagment.DAL.Entities.Reservations
         public int HousekeepingID { get; set; }
         public int MealInfoID { get; set; }
         [ForeignKey("GuestID")]
-        public Guest Guest { get; set; }
+        public HotelManagment.DAL.Entities.GuestInfo.Guest Guest { get; set; }
         [ForeignKey("RoomID")]
 
         public Room Room { get; set; }
@@ -31,7 +33,5 @@ namespace HotelManagment.DAL.Entities.Reservations
         [ForeignKey("MealInfoID")]
 
         public MealInfo MealInfo { get; set; }
-
-
     }
 }

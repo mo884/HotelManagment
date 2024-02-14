@@ -1,5 +1,4 @@
-﻿using HotelManagment.BLL.Feature.DailyDiningBundleRep.ModelVM;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +13,5 @@ namespace HotelManagment.BLL.Helpers
         public static int ReserveFoodID {  get; set; }
         public static int KeepHousingID { get; set; }
 
-        public static DailyDiningBundleVM DailyDiningBundleVM { get; set; }
     }
 }
