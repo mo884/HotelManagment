@@ -19,7 +19,7 @@ namespace HotelManagment.BLL.Feature.Reservations.ModelVM
         public bool check_in { get; set; }
 
         public int GuestID { get; set; }
-        public int RoomID { get; set; }
+        public int? RoomID { get; set; }
         public int HousekeepingID { get; set; }
         public int MealInfoID { get; set; }
         [ForeignKey("GuestID")]

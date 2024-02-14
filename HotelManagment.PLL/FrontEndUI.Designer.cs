@@ -82,6 +82,8 @@
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             ReservationFormPanal = new Panel();
+            button4 = new Button();
+            button8 = new Button();
             PArt3 = new Panel();
             button10 = new Button();
             comboBox13 = new ComboBox();
@@ -98,7 +100,6 @@
             RoomPrice = new TextBox();
             RoomType = new TextBox();
             Floor = new TextBox();
-            button19 = new Button();
             button20 = new Button();
             checkBox4 = new CheckBox();
             checkBox5 = new CheckBox();
@@ -121,7 +122,7 @@
             GenderCombo = new ComboBox();
             DayCombo = new ComboBox();
             MonthCombo = new ComboBox();
-            Phone = new TextBox();
+            PhoneText = new TextBox();
             LName = new TextBox();
             FName = new TextBox();
             panel2 = new Panel();
@@ -687,6 +688,8 @@
             // 
             // ReservationFormPanal
             // 
+            ReservationFormPanal.Controls.Add(button4);
+            ReservationFormPanal.Controls.Add(button8);
             ReservationFormPanal.Controls.Add(PArt3);
             ReservationFormPanal.Controls.Add(panel15);
             ReservationFormPanal.Controls.Add(panel4);
@@ -696,6 +699,29 @@
             ReservationFormPanal.Size = new Size(1069, 445);
             ReservationFormPanal.TabIndex = 2;
             // 
+            // button4
+            // 
+            button4.Image = Properties.Resources.ic_action_new;
+            button4.Location = new Point(877, 109);
+            button4.Name = "button4";
+            button4.Size = new Size(168, 112);
+            button4.TabIndex = 29;
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // button8
+            // 
+            button8.BackColor = Color.LightSeaGreen;
+            button8.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button8.ForeColor = SystemColors.ButtonHighlight;
+            button8.Location = new Point(862, 239);
+            button8.Name = "button8";
+            button8.Size = new Size(204, 63);
+            button8.TabIndex = 28;
+            button8.Text = "Cradit Card";
+            button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
+            // 
             // PArt3
             // 
             PArt3.BackColor = SystemColors.ActiveBorder;
@@ -704,7 +730,7 @@
             PArt3.Controls.Add(panel1);
             PArt3.Location = new Point(595, 3);
             PArt3.Name = "PArt3";
-            PArt3.Size = new Size(306, 436);
+            PArt3.Size = new Size(249, 436);
             PArt3.TabIndex = 39;
             // 
             // button10
@@ -712,7 +738,7 @@
             button10.BackColor = Color.Azure;
             button10.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button10.ForeColor = Color.Teal;
-            button10.Location = new Point(39, 390);
+            button10.Location = new Point(12, 390);
             button10.Name = "button10";
             button10.Size = new Size(212, 37);
             button10.TabIndex = 41;
@@ -725,16 +751,16 @@
             comboBox13.FormattingEnabled = true;
             comboBox13.Location = new Point(3, 28);
             comboBox13.Name = "comboBox13";
-            comboBox13.Size = new Size(300, 23);
+            comboBox13.Size = new Size(207, 23);
             comboBox13.TabIndex = 38;
             // 
             // panel1
             // 
             panel1.Controls.Add(button9);
             panel1.Controls.Add(Remove);
-            panel1.Location = new Point(12, 289);
+            panel1.Location = new Point(3, 289);
             panel1.Name = "panel1";
-            panel1.Size = new Size(277, 90);
+            panel1.Size = new Size(218, 90);
             panel1.TabIndex = 45;
             // 
             // button9
@@ -742,24 +768,26 @@
             button9.BackColor = Color.LightSeaGreen;
             button9.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button9.ForeColor = Color.White;
-            button9.Location = new Point(30, 43);
+            button9.Location = new Point(6, 46);
             button9.Name = "button9";
             button9.Size = new Size(212, 37);
             button9.TabIndex = 42;
             button9.Text = "Edit";
             button9.UseVisualStyleBackColor = false;
+            button9.Click += button9_Click;
             // 
             // Remove
             // 
             Remove.BackColor = Color.Crimson;
             Remove.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Remove.ForeColor = Color.White;
-            Remove.Location = new Point(30, 3);
+            Remove.Location = new Point(3, 3);
             Remove.Name = "Remove";
             Remove.Size = new Size(212, 37);
             Remove.TabIndex = 43;
             Remove.Text = "Remove";
             Remove.UseVisualStyleBackColor = false;
+            Remove.Click += Remove_Click;
             // 
             // panel15
             // 
@@ -773,7 +801,6 @@
             panel15.Controls.Add(RoomPrice);
             panel15.Controls.Add(RoomType);
             panel15.Controls.Add(Floor);
-            panel15.Controls.Add(button19);
             panel15.Controls.Add(button20);
             panel15.Controls.Add(checkBox4);
             panel15.Controls.Add(checkBox5);
@@ -862,30 +889,19 @@
             Floor.Size = new Size(137, 23);
             Floor.TabIndex = 28;
             // 
-            // button19
-            // 
-            button19.BackColor = Color.Azure;
-            button19.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button19.ForeColor = Color.Teal;
-            button19.Location = new Point(22, 402);
-            button19.Name = "button19";
-            button19.Size = new Size(252, 37);
-            button19.TabIndex = 37;
-            button19.Text = "Submit";
-            button19.UseVisualStyleBackColor = false;
-            button19.Click += button19_Click;
-            // 
             // button20
             // 
             button20.BackColor = Color.Azure;
             button20.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button20.ForeColor = Color.Teal;
-            button20.Location = new Point(22, 359);
+            button20.Location = new Point(22, 390);
             button20.Name = "button20";
             button20.Size = new Size(252, 37);
             button20.TabIndex = 36;
             button20.Text = "Finalize bill";
             button20.UseVisualStyleBackColor = false;
+            button20.Visible = false;
+            button20.Click += button20_Click;
             // 
             // checkBox4
             // 
@@ -968,7 +984,7 @@
             panel4.Controls.Add(GenderCombo);
             panel4.Controls.Add(DayCombo);
             panel4.Controls.Add(MonthCombo);
-            panel4.Controls.Add(Phone);
+            panel4.Controls.Add(PhoneText);
             panel4.Controls.Add(LName);
             panel4.Controls.Add(FName);
             panel4.Controls.Add(panel2);
@@ -1089,12 +1105,12 @@
             MonthCombo.Size = new Size(91, 23);
             MonthCombo.TabIndex = 4;
             // 
-            // Phone
+            // PhoneText
             // 
-            Phone.Location = new Point(-3, 191);
-            Phone.Name = "Phone";
-            Phone.Size = new Size(277, 23);
-            Phone.TabIndex = 2;
+            PhoneText.Location = new Point(-1, 191);
+            PhoneText.Name = "PhoneText";
+            PhoneText.Size = new Size(277, 23);
+            PhoneText.TabIndex = 2;
             // 
             // LName
             // 
@@ -1196,7 +1212,7 @@
             // 
             SearchPanal.Controls.Add(Searchbtn);
             SearchPanal.Controls.Add(textBox11);
-            SearchPanal.Location = new Point(6614, 107);
+            SearchPanal.Location = new Point(9000, 107);
             SearchPanal.Name = "SearchPanal";
             SearchPanal.Size = new Size(692, 100);
             SearchPanal.TabIndex = 3;
@@ -1365,7 +1381,6 @@
         private TextBox textBox2;
         private TextBox textBox1;
         private Panel panel15;
-        private Button button19;
         private Button button20;
         private CheckBox checkBox4;
         private CheckBox checkBox5;
@@ -1389,7 +1404,7 @@
         private ComboBox YearesCombo;
         private ComboBox DayCombo;
         private ComboBox MonthCombo;
-        private TextBox Phone;
+        private TextBox PhoneText;
         private TextBox LName;
         private TextBox FName;
         private Panel SearchPanal;
@@ -1423,5 +1438,7 @@
         private Label label18;
         private ComboBox Street_AdressCombo;
         private Label label19;
+        private Button button4;
+        private Button button8;
     }
 }

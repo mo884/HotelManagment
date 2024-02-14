@@ -23,7 +23,7 @@ namespace HotelManagment.BLL.Feature.Guest.Command.Reposoratory
                 HotelDBContext.Add(Guest);
                 HotelDBContext.SaveChanges();
 
-                CheckFoodMenue.GuestID =HotelDBContext.Guests.OrderByDescending(a=>a.Id).LastOrDefault().Id;
+                CheckFoodMenue.GuestID =Guest.Id;
 
             }
             catch (Exception)

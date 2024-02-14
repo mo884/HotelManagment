@@ -17,14 +17,14 @@ namespace HotelManagment.DAL.Entities.Reservations
         public bool check_in { get; set; }
 
         public int GuestID { get; set; }
-        public int RoomID { get; set; }
+        public int? RoomID { get; set; }
         public int HousekeepingID { get; set; }
         public int MealInfoID { get; set; }
         [ForeignKey("GuestID")]
         public Guest Guest { get; set; }
         [ForeignKey("RoomID")]
 
-        public Room Room { get; set; }
+        public Room? Room { get; set; }
         [ForeignKey("HousekeepingID")]
 
         public Housekeeping Housekeeping { get; set; }

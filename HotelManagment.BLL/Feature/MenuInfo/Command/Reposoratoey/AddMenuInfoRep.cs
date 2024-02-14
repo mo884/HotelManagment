@@ -24,7 +24,7 @@ namespace HotelManagment.BLL.Feature.MenuInfo.Command.Reposoratoey
             Countbreak_fast=menuInfoVM.Countbreak_fast,
             Countdinner = menuInfoVM.Countdinner,
             Countlunch = menuInfoVM.Countlunch,
-            FoodBill = menuInfoVM.FoodBill,
+           
             Isbreak_fast = menuInfoVM.Isbreak_fast,
             Isdinner = menuInfoVM.Isdinner,
             Islunch = menuInfoVM.Islunch,
@@ -32,13 +32,13 @@ namespace HotelManagment.BLL.Feature.MenuInfo.Command.Reposoratoey
 
             Pricedinner = menuInfoVM.Pricedinner*menuInfoVM.Countlunch,
             Pricelunch= menuInfoVM.Pricelunch*menuInfoVM.Countdinner,
-          
-           
+
+             FoodBill = menuInfoVM.Pricebreak_fast *menuInfoVM.Countbreak_fast+menuInfoVM.Pricedinner*menuInfoVM.Countlunch+ menuInfoVM.Pricelunch*menuInfoVM.Countdinner,
 
             };
             hotelDBContext.Add(mealInfo);
             hotelDBContext.SaveChanges();
-            CheckFoodMenue.ReserveFoodID = hotelDBContext.MealInfos.OrderByDescending(a => a.ID).LastOrDefault().ID;
+            CheckFoodMenue.ReserveFoodID =mealInfo.ID;
         }
     }
 }

@@ -63,6 +63,10 @@ namespace HotelManagment.PLL
                 checkBox4.Checked=false;
                 checkBox5.Checked=false;
                 checkBox6.Checked=false;
+                textBox1.Visible = false;
+                textBox2.Visible = false;
+                textBox3.Visible = false;
+
             }
             else
             {
@@ -120,9 +124,9 @@ namespace HotelManagment.PLL
                     Isbreak_fast = checkBox2.Checked,
                     Isdinner = checkBox3.Checked,
                     Islunch = checkBox1.Checked,
-                    Countdinner = int.Parse(textBox3.Text),
-                    Countlunch = int.Parse(textBox2.Text),
-                    Countbreak_fast = int.Parse(textBox1.Text),
+                    Countdinner = int.TryParse(textBox3.Text, out int result) ? result : 0,
+                    Countlunch =int.TryParse(textBox2.Text, out  result) ? result : 0,
+                    Countbreak_fast =int.TryParse(textBox1.Text, out result) ? result : 0,
                     Pricebreak_fast = 7,
                     Pricedinner =15,
                     Pricelunch=15,
@@ -177,8 +181,9 @@ namespace HotelManagment.PLL
                 housekeeping.towel=checkBox5.Checked;
                 housekeeping.cleaning=checkBox6.Checked;
                 editHousKepingRep.Edit(housekeeping);
-                this.Close();
+             
             }
+            this.Close();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

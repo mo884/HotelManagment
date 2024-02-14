@@ -194,6 +194,7 @@
             button19.TabIndex = 37;
             button19.Text = "Submit";
             button19.UseVisualStyleBackColor = false;
+            button19.Click += button19_Click;
             // 
             // button21
             // 
@@ -206,6 +207,7 @@
             button21.TabIndex = 32;
             button21.Text = "Food and menu";
             button21.UseVisualStyleBackColor = false;
+            button21.Click += button21_Click;
             // 
             // dateTimePicker3
             // 
@@ -473,7 +475,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(783, 450);
+            ClientSize = new Size(1087, 450);
             Controls.Add(ReservationFormPanal);
             Name = "ReservationForm";
             Text = "ReservationForm";

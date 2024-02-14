@@ -6,6 +6,10 @@ using HotelManagment.BLL.Feature.Guest.Command.Reposoratory;
 using HotelManagment.BLL.Feature.Guest.ModelVM;
 using HotelManagment.BLL.Feature.Guest.Queries.InterFace;
 using HotelManagment.BLL.Feature.Guest.Queries.Reposoratory;
+using HotelManagment.BLL.Feature.HousKeepingRep.Command.Interface;
+using HotelManagment.BLL.Feature.HousKeepingRep.Command.Reposoratory;
+using HotelManagment.BLL.Feature.MenuInfo.Command.Interface;
+using HotelManagment.BLL.Feature.MenuInfo.Command.Reposoratoey;
 using HotelManagment.BLL.Feature.Reservations.Command;
 using HotelManagment.BLL.Feature.Reservations.ModelVM;
 using HotelManagment.BLL.Feature.Reservations.Queries.Interface;
@@ -36,8 +40,13 @@ namespace HotelManagment.PLL
         IGetAllCityRep getAllCityRep;
         IGetAllReservationRepo getAllReservationRepo;
         IGetAllStreets getAllStreets;
-
+        IDeleteGuestRep deleteGuestRep;
+        IDeletHousKeepingRep deletHousKeepingRep;
+        IDeleteReservationRep deleteReservationRep;
+        IDeleteMenuInfoRepo DeleteMenuInfoRepo;
+        IEditeReservationRep editeReservationRep;
         private FoodForm foodForm;
+        IEditGuestRep editGuestRep;
         public FrontEndUI()
         {
             InitializeComponent();
@@ -50,14 +59,19 @@ namespace HotelManagment.PLL
             addReservation = new AddReservationRep();
             getAllCityRep = new GetAllCity();
             getAllStreets = new GetAllStreets();
-           
+            deleteGuestRep = new DeleteGuestRep();
+            deleteReservationRep = new DeleteReservationRep();
+            editGuestRep = new EditGuestRep();
+            editeReservationRep = new EditeReservationRep();
             foodForm = new FoodForm();
+            DeleteMenuInfoRepo = new DeleteMenuInfoRepo();
+            deletHousKeepingRep = new DeletHousKeepingRep();
             StateBindingvar  = new BindingSource(getAllStateRep.GetAll(), "");
         }
 
 
 
-      
+
         BindingSource StreetBinding;
         BindingSource StateBindingvar;
         BindingSource RoomBinding;
@@ -72,22 +86,19 @@ namespace HotelManagment.PLL
             comboBox13.DataSource = BindingSource;
             comboBox13.ValueMember ="leaving_time";
 
-            LName.DataBindings.Add("Text", BindingSource, "Guest.Last_name");
-            FName.DataBindings.Add("Text", BindingSource, "Guest.First_name");
-            GenderCombo.DataBindings.Add("SelectedValue", BindingSource, "Guest.Gender");
-            Phone.DataBindings.Add("Text", BindingSource, "Guest.Phone_number");
-            textBox6.DataBindings.Add("Text", BindingSource, "Guest.Emai");
-            button19.Visible=false;
-            panel1.Visible=true;
             GenderCombo.DataSource =GetAllGender.Getgenders();
             MonthCombo.DataSource = GetAllMothName.GetAllMonth();
             MonthCombo.ValueMember = "Name";
             DayCombo.DataSource= GetAllDays.GetAllDay();
             DayCombo.ValueMember = "Name";
-            CheckFoodMenue.GuestID= Data.FirstOrDefault().GuestID;
-            CheckFoodMenue.ReserveFoodID = Data.FirstOrDefault().MealInfoID;
-            CheckFoodMenue.RoomID=Data.FirstOrDefault().RoomID;
-            CheckFoodMenue.KeepHousingID=Data.FirstOrDefault().HousekeepingID;
+            if (Data.Count !=0)
+            {
+                CheckFoodMenue.GuestID= Data.FirstOrDefault().GuestID;
+                CheckFoodMenue.ReserveFoodID = Data.FirstOrDefault().MealInfoID;
+                CheckFoodMenue.RoomID=Data.FirstOrDefault().RoomID;
+                CheckFoodMenue.KeepHousingID=Data.FirstOrDefault().HousekeepingID;
+            }
+
 
             comboBox13.SelectedValueChanged += (sender, e) =>
             {
@@ -99,24 +110,36 @@ namespace HotelManagment.PLL
                     // You may need to adjust this according to your actual implementation
                     var reservation = comboBox13.SelectedItem as ReservationVM;
                     var Data = reservation;
+                    FName.Text = Data.Guest.First_name; LName.Text = Data.Guest.Last_name;
+                    PhoneText.Text =Data.Guest.Phone_number.ToString(); textBox6.Text = Data.Guest.email_address.ToString();
+                    string[] Date = Data.Guest.Birth_day.Split('/');
+                    Days days = new Days() { Name = Date[0] };
+                    DayCombo.SelectedValue =days.Name;
+                    MonthVM monthVM = new()
+                    {
+                        Name =Date[1]
+                    };
+                    MonthCombo.SelectedValue=monthVM.Name;
+                    YearText.Text =Date[2];
                     StateName.SelectedValue = Data.Guest.Streets.City.State.StateName;
                     ZipCodeCombo.Text=Data.Guest.Streets.City.State.ZIbCode;
                     Street_AdressCombo.SelectedValue =Data.Guest.Streets.Street_Adress;
                     ComboCityName.SelectedValue=Data.Guest.Streets.City.CityName;
                     ComboCityName.SelectionChangeCommitted += ComboCityName_SelectionChangeCommitted;
-                    RoomNUMID.SelectedValue  = Data.Room.RoomTypeID.ToString();
+                    RoomNUMID.SelectedValue  = Data.Room.room_number.ToString();
                     RoomType.Text = Data.Room.RoomType.room_type.ToString();
                     Floor.Text=Data.Room.RoomType.room_floor.ToString();
                     RoomPrice.Text = Data.Room.RoomType.Price.ToString();
-                  
+
                     CheckFoodMenue.GuestID=Data.GuestID;
                     CheckFoodMenue.ReserveFoodID = Data.MealInfoID;
                     CheckFoodMenue.RoomID=Data.RoomID;
                     CheckFoodMenue.KeepHousingID=Data.HousekeepingID;
+                    button20.Visible=true;
                 }
             };
             var AllState = getAllStateRep.GetAll();
-          
+
             StateName.DataSource = StateBindingvar;
             StateName.ValueMember ="StateName";
             StreetsBind  = new BindingSource(getAllStreets.GetAll(), "");
@@ -184,6 +207,7 @@ namespace HotelManagment.PLL
         }
         private void button10_Click(object sender, EventArgs e)
         {
+
             ReservationForm reservationForm = new ReservationForm();
             reservationForm.ShowDialog();
         }
@@ -192,6 +216,54 @@ namespace HotelManagment.PLL
 
 
             foodForm.ShowDialog();
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            if (CheckFoodMenue.GuestID!=0&&CheckFoodMenue.ReserveFoodID!=0&&CheckFoodMenue.RoomID!=0)
+            {
+                Bill bill = new Bill();
+                bill.ShowDialog();
+            }
+        }
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (CheckFoodMenue.GuestID!=0&&CheckFoodMenue.ReserveFoodID!=0&&CheckFoodMenue.RoomID!=0)
+            {
+                var StreetsSelect = (Street_AdressCombo.SelectedItem) as GetStreetByCityNameVM;
+
+                EditGuestVM EditeGuestVM = new EditGuestVM()
+                {
+                    Id = CheckFoodMenue.GuestID,
+                    First_name = FName.Text,
+                    Last_name = LName.Text,
+                    Birth_day= $"{DayCombo.SelectedValue}/{MonthCombo.SelectedValue}/{YearText.Text}",
+                    email_address = this.textBox6.Text,
+                    Gender=(Gender)GenderCombo.SelectedValue,
+                    Phone_number = PhoneText.Text,
+                    StreetID =StreetsSelect.ID
+                };
+                editGuestRep.Edit(EditeGuestVM);
+                editeReservationRep.Edite(new() { GuestID = CheckFoodMenue.GuestID, HousekeepingID =CheckFoodMenue.KeepHousingID, MealInfoID=CheckFoodMenue.ReserveFoodID, RoomID=CheckFoodMenue.RoomID, leaving_time=dateTimePicker4.Value, arrival_time=dateTimePicker3.Value, check_in =checkBox6.Checked });
+
+            }
+        }
+        private void Remove_Click(object sender, EventArgs e)
+        {
+            if (CheckFoodMenue.GuestID!=0&&CheckFoodMenue.ReserveFoodID!=0&&CheckFoodMenue.RoomID!=0)
+            {
+                DeleteMenuInfoRepo.Delete(CheckFoodMenue.ReserveFoodID);
+                deletHousKeepingRep.Delete(CheckFoodMenue.KeepHousingID);
+
+                deleteReservationRep.Delete(CheckFoodMenue.RoomID, CheckFoodMenue.GuestID, CheckFoodMenue.ReserveFoodID);
+                deleteGuestRep.Delete(CheckFoodMenue.GuestID);
+
+                CheckFoodMenue.GuestID=0;
+                CheckFoodMenue.ReserveFoodID = 0;
+                CheckFoodMenue.RoomID=0;
+                CheckFoodMenue.KeepHousingID=0;
+                this.Refresh();
+            }
         }
         private void button5_Click(object sender, EventArgs e)
         {
@@ -297,6 +369,15 @@ namespace HotelManagment.PLL
             this.button5.ForeColor =Color.LightSeaGreen;
         }
 
-       
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            CreditCard creditCard = new CreditCard();
+            creditCard.ShowDialog();
+        }
     }
 }

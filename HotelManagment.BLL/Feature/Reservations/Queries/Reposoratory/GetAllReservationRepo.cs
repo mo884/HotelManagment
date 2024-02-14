@@ -37,7 +37,7 @@ namespace HotelManagment.BLL.Feature.Reservations.Queries.Reposoratory
                     leaving_time = item.leaving_time,
                     MealInfo = hotelDBContext.MealInfos.Where(a => a.ID==item.MealInfoID).FirstOrDefault(),
                     Room =hotelDBContext.Rooms.Where(a => a.ID==item.RoomID).Include(a=>a.RoomType).FirstOrDefault(),
-                    RoomID=item.RoomID,
+                    RoomID= item.RoomID,
                 };
                 reservationVMs.Add(reservationVM);
             }
